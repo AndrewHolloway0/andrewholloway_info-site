@@ -100,12 +100,13 @@
             </span>
         </div>
     </div>
-    <div id="earlyreleases" class="section" style="display:none;">
+    <div id="earlyreleases" class="section">
         <div class="content">
             <h2>Get Releases Early</h2>
             <form>
-                <input type="email" placeholder="email address" />
-                <button type="submit">Enter</button>
+                <!-- <input type="email" placeholder="email address" /> -->
+                <!-- <button type="submit">Enter</button> -->
+                <a href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
             </form>
         </div>
     </div>
