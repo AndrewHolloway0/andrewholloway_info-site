@@ -7,6 +7,7 @@
     <meta name="keywords" content="Portfolio, Music">
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/hamburgers.css">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="music.css">
