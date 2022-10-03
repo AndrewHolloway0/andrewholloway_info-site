@@ -72,7 +72,8 @@
 }
 
 #earlyreleases input,
-#earlyreleases button {
+#earlyreleases button,
+#earlyreleases a {
     margin: 10px;
     padding: 10px 32px;
     border: 0;
@@ -81,6 +82,7 @@
     background-color: var(--offwhite);
     font-size: 22px;
     width: fit-content;
+    text-decoration: none;
 }
 
 #earlyreleases input {
