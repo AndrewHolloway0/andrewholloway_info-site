@@ -1,0 +1,72 @@
+@import url('/vars.css');
+.module {
+    border: 0;
+    border-radius: 10px;
+    height: 181px;
+    min-width: 722px;
+    margin: 12px auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    text-decoration: none;
+    transition: all 0.5s, transform 1.2s;
+    cursor: pointer;
+}
+.module:hover {
+    transform: scale(1.08);
+}
+.comingsoon > div {
+    transition: opacity 0.1s;
+}
+.comingsoon:hover > div {
+    opacity: 0;
+}
+.comingsoontxt {
+    margin-top: -20px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.comingsoon:hover > .comingsoontxt {
+    opacity: 1;
+}
+#introduction {
+    padding: 50px 0 20px 0;
+}
+.moduletext {
+    transform: translate(0, 50%);
+}
+.module#musicianartist {
+    background-image: url("/media/musicianartistmodule.jpg");
+}
+.module#itprofessional {
+    background-image: url("/media/itprofessionalmodule.jpg");
+}
+.module#programmer {
+    background-image: url("/media/programmermodule.jpg");
+}
+
+@media screen and (max-width: 780px) {
+    .module {
+        height: 160px;
+        min-width: 510px;
+    }
+    .moduletext {
+        transform: translate(0, 46%);
+    }
+    .comingsoontxt {
+        margin-top: -32px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    header > h3 {
+        padding: 10px;
+    }
+    .module {
+        height: 130px;
+        min-width: 345px;
+    }
+    .moduletext {
+        transform: translate(0, 40%);
+    }
+}

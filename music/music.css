@@ -1,0 +1,446 @@
+@import url('/vars.css');
+
+#mobilenavigator {
+    width: 100vh;
+}
+
+#mobilenavigator #mobilenavbg {
+    position: fixed;
+    background-color: var(--headers);
+    height: 90px;
+    width: 100%;
+    display: none;
+}
+
+#mobilenavigator #mobilenavbg a {
+    font-size: 32px;
+    text-decoration: none;
+    position: absolute;
+    padding: 24px;
+}
+
+#mobilenavigator #mobilenavburger {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .3);
+    right: 15px;
+    top: 15px;
+    z-index: 3;
+    display: none;
+}
+
+.fullpage {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    transition: all 1s;
+}
+
+#frontpage {
+    background-image: url("/media/musicfront.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+}
+
+#maintext {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
+}
+
+#cornernav {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    text-align: left;
+    transition: all 0.3s;
+}
+
+#cornernav a {
+    text-decoration: none;
+}
+
+#cornernav.fadeUpOut {
+    opacity: 0;
+    bottom: 90px;
+}
+
+#earlyreleases form {
+    padding-top: 30px;
+}
+
+#earlyreleases input,
+#earlyreleases button {
+    margin: 10px;
+    padding: 10px 32px;
+    border: 0;
+    border-radius: 50px;
+    color: black;
+    background-color: var(--offwhite);
+    font-size: 22px;
+    width: fit-content;
+}
+
+#earlyreleases input {
+    width: 700px;
+}
+
+#stickynav {
+    background-color: var(--headers);
+}
+
+#stickynav .content {
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#stickynav a {
+    text-decoration: none;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#upcoming.fullpage {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+#upcoming #upcomingart {
+    background-image: url("/media/upcomingart.jpg");
+    filter: blur(20px) brightness(0.9);
+    -webkit-filter: blur(20px) brightness(0.9);
+    -moz-filter: blur(20px) brightness(0.9);
+    -ms-filter: blur(20px) brightness(0.9);
+    -o-filter: blur(20px) brightness(0.9);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    height: calc(100vh + 55px);
+    width: calc(100vw + 55px);
+    position: absolute;
+}
+
+#upcoming #upcomingtxt {
+    display: grid;
+    position: relative;
+    height: 100vh;
+    place-items: center;
+    grid-template-rows: 15vh 60vh auto;
+}
+
+#upcoming #albumartupcoming {
+    margin: 0 auto;
+    background-image: url("/media/upcomingart.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    height: 100%;
+    width: 100%;
+    transition: all 1s;
+    transform: scale(0.92);
+    opacity: 0;
+}
+
+#upcoming #albumartupcoming.zoomedin {
+    transform: scale(1);
+    opacity: 1;
+}
+
+#upcoming #albumtitle {
+    padding: 25px;
+    padding-top: 0;
+    margin-top: -25px;
+}
+
+#discography #albumsandsingles {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+    padding-top: 40px;
+    justify-items: center;
+}
+
+#discography .discoitem {
+    display: grid;
+    grid-template-rows: 180px auto auto;
+    width: 180px;
+    text-align: left;
+}
+
+#discography .discoart {
+    width: 100%;
+    height: 100%;
+    background-color: var(--offwhite);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    text-align: left;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+#discography .discoart span {
+    display: block;
+    padding: 40px;
+    color: var(--midgray);
+}
+
+#discography .discotitle {
+    font-size: 22px;
+    padding-top: 12px;
+}
+
+#d-03 .discoart {
+    background-image: url("/media/discography/d-03.jpg");
+}
+
+#d-02 .discoart {
+    background-image: url("/media/discography/d-02.jpg");
+}
+
+#d-01 .discoart {
+    background-image: url("/media/discography/d-01.jpg");
+}
+
+#about #aboutcontent {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 30% auto;
+    text-align: left;
+    font-size: 24px;
+    gap: 26px;
+}
+
+#about #aboutcontent p:last-child {
+    padding-top: 26px;
+}
+
+#about #aboutimg {
+    background-image: url("/media/aboutart.jpg");
+    background-color: var(--offwhite);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    padding-top: 100%;
+    height: 0;
+}
+
+@media screen and (max-width: 1120px) {
+    #frontpage {
+        max-height: 60vh !important;
+    }
+
+    .h0 {
+        font-size: 90px;
+    }
+
+    h1.subtext {
+        font-size: 38px;
+    }
+
+    #cornernav {
+        display: none;
+    }
+
+    #mobilenavburger {
+        display: block !important;
+    }
+
+    #earlyreleases .content form {
+        display: grid;
+        justify-content: center;
+    }
+
+    #earlyreleases button {
+        margin: 10px auto;
+    }
+
+    .content {
+        padding: 0 20px;
+    }
+
+    #discography #albumsandsingles {
+        grid-template-columns: auto auto auto;
+        width: auto;
+        margin: 0 auto;
+        gap: 25px;
+    }
+
+    #about #aboutimg {
+        display: none;
+    }
+
+    #about #aboutcontent {
+        grid-template-columns: 720px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    #frontpage {
+        max-height: 38vh !important;
+    }
+
+    .h0 {
+        font-size: 65px;
+    }
+
+    h1.subtext {
+        font-size: 30px;
+    }
+
+    #earlyreleases input {
+        width: 380px;
+    }
+
+    #stickynav {
+        display: none;
+    }
+
+    #upcoming #albumartupcoming {
+        height: 85%;
+        width: 85%;
+    }
+
+    #discography #albumsandsingles {
+        grid-template-columns: auto auto;
+    }
+
+    #about #aboutcontent {
+        grid-template-columns: 570px;
+    }
+
+    #contact .content div {
+        display: grid;
+        margin: 0 auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    #contact .content div a {
+        margin: 10px auto;
+    }
+
+    #socialbutton,
+    #socialcard {
+        display: none !important;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    /* 
+    h3 {
+        font-size: ;
+    }
+    h4 {
+        font-size: ;
+    } */
+}
+
+@media screen and (max-width: 570px) {
+
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #frontpage {
+        max-height: 220px !important;
+    }
+
+    #frontpage .h0 {
+        font-size: 36px;
+    }
+
+    #frontpage .subtext {
+        font-size: 18px;
+    }
+
+    #mobilenavigator #mobilenavburger {
+        transform: scale(0.85);
+        right: 10px;
+        top: 10px;
+    }
+
+    #mobilenavigator #mobilenavbg {
+        height: 78px;
+    }
+
+    #mobilenavigator #mobilenavbg a {
+        font-size: 24px;
+        padding: 22px;
+    }
+
+    .content {
+        padding: 0 25px;
+    }
+
+    .section {
+        padding: 22px 0 30px 0;
+    }
+
+    #earlyreleases input,
+    #earlyreleases button {
+        font-size: 18px;
+        margin: 8px auto;
+        padding: 8px 28px;
+    }
+
+    #earlyreleases form {
+        padding-top: 12px;
+    }
+
+    #earlyreleases input {
+        width: 215px;
+    }
+    
+    #upcoming #upcomingtxt {
+        height: -webkit-fill-available;
+        padding: 28px;
+        grid-template-rows: 15vh 54vh auto;
+    }
+
+    #discography #albumsandsingles {
+        gap: 20px;
+    }
+
+    #discography .discoart {
+        font-size: 18px;
+    }
+
+    #discography .discoitem {
+        grid-template-rows: 120px auto auto;
+        width: 120px;
+    }
+
+    #discography .discotitle {
+        font-size: 16px;
+    }
+
+    #discography .discotype {
+        font-size: 14px;
+    }
+
+    #discography .discoart span {
+        padding: 26px;
+    }
+
+    #about #aboutcontent {
+        grid-template-columns: auto;
+        font-size: 18px;
+        text-align: center;
+    }
+
+}
