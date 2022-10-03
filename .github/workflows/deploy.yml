@@ -17,6 +17,18 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Reset Permissions before deployment
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            sudo chmod -R 755 /var/www/andrewholloway_info
+            sudo chown -R github:github /var/www/andrewholloway_info
+            sudo setfacl -R -m u:www-data:rwx /var/www/andrewholloway_info
+
       - uses: actions/checkout@v2
       - name: Deploy source-code
         uses: appleboy/scp-action@master
@@ -28,3 +40,15 @@ jobs:
         with:
           source: "*"
           target: "/var/www/andrewholloway_info"
+
+      - name: Reset Permissions after deployment
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            sudo chmod -R 755 /var/www/andrewholloway_info
+            sudo chown -R www-data:www-data /var/www/andrewholloway_info
+            sudo setfacl -R -m u:github:rwx /var/www/andrewholloway_info
