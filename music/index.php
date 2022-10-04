@@ -106,7 +106,8 @@
             <form>
                 <!-- <input type="email" placeholder="email address" /> -->
                 <!-- <button type="submit">Enter</button> -->
-                <a href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
+                <a class="basiccirclebutton" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
+                <a href="#" target="_blank">Already subscribed? Click here to access content!</a>
             </form>
         </div>
     </div>
