@@ -106,7 +106,7 @@
             <form>
                 <!-- <input type="email" placeholder="email address" /> -->
                 <!-- <button type="submit">Enter</button> -->
-                <a href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
+                <a class="typicalbutton" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
             </form>
         </div>
     </div>
@@ -155,6 +155,7 @@
                     </div>
                 </div>
             </div>
+            <a class="typicalbutton" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Early Access Now!</a>
         </div>
     </div>
     <div id="about" class="section">
