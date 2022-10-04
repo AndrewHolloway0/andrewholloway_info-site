@@ -107,7 +107,7 @@
                 <!-- <input type="email" placeholder="email address" /> -->
                 <!-- <button type="submit">Enter</button> -->
                 <a class="basiccirclebutton" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
-                <a href="#" target="_blank">Already subscribed? Click here to access content!</a>
+                <a href="https://www.patreon.com/oauth2/authorize?response_type=code&client_id=8cTqpdX2R801HOisCTqBz69Di4OulIONj6jt8r75HP8fKk_HTTBTbQgNrsYa1alo&redirect_uri=https://development.andrewholloway.info/music/patreonperks/" target="_blank">Already subscribed? Click here to access content!</a>
             </form>
         </div>
     </div>
