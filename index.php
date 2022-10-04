@@ -1,8 +1,3 @@
-<?php
-
-    echo $_SERVER['SERVER_NAME'];
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +23,13 @@
 </head>
 
 <body>
+    <?php
+
+    if($_SERVER['SERVER_NAME'] == "development.andrewholloway.info") {
+        echo "ACCESSED DEVELOPMENT SITE";
+    }
+
+    ?>
     <header>
         <h3>Andrew Holloway</h3>
     </header>
