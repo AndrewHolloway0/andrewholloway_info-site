@@ -7,7 +7,7 @@
     <meta name="keywords" content="Portfolio, Music, Technology Professional">
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
-    <link rel="icon" href="/favicon.png?v=0001" />
+    <link rel="icon" href="/favicon.png?v=0002" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="home.css" />
     <script>
@@ -31,7 +31,7 @@
             <h1>hi there!</h1>
             <p class="h1subtext subtext">Select the portfolio</p>
         </div>
-        <a href="/music" id="musicianartist" class="module unselectable">
+        <a href="/music" id="musicianartist" class="module">
             <div class="moduletext">
                 <h2>Andrew Holloway</h2>
                 <p class="h2subtext subtext">musician & artist</p>
