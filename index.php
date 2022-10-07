@@ -7,7 +7,7 @@
     <meta name="keywords" content="Portfolio, Music, Technology Professional">
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
-    <link rel="icon" href="/favicon.png?v=0001" />
+    <link rel="icon" href="/favicon.png?v=0002" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="home.css" />
     <script>

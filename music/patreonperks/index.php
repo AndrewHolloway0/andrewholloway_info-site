@@ -3,11 +3,11 @@
 //get ?code
 $loginrequired = true;
 
-if (!isset($_GET["code"]) || isset($_COOKIE["patreon_refesh_token"]) && isset($_COOKIE["patreon_session_id"]) && isset($_COOKIE["patreon_scope"])) {
+if (isset($_COOKIE["patreon_refesh_token"]) && isset($_COOKIE["patreon_session_id"]) && isset($_COOKIE["patreon_scope"])) {
     $loginrequired = false;
-} else {
+} elseif (isset($_GET["code"])) {
     $urlCODE = htmlspecialchars($_GET["code"]);
-    if($_SERVER['SERVER_NAME'] == "development.andrewholloway.info" || $_SERVER['SERVER_NAME'] == "localhost") {
+    if ($_SERVER['SERVER_NAME'] == "development.andrewholloway.info" || $_SERVER['SERVER_NAME'] == "localhost") {
         $clientID = "8cTqpdX2R801HOisCTqBz69Di4OulIONj6jt8r75HP8fKk_HTTBTbQgNrsYa1alo";
         $clientSecret = "sQ7zxe-6WoAAy_bhwdZ7MkrdS1gKF7vPGO_lgB2Sx0AUTr_Xnl0ibS5iYzw3z9rX";
     } else {
@@ -27,30 +27,29 @@ if (!isset($_GET["code"]) || isset($_COOKIE["patreon_refesh_token"]) && isset($_
     $data = curl_exec($curl);
     curl_close($curl);
 
-    $data2 = json_decode($data,false);
+    $data2 = json_decode($data, false);
 
-    if(!isset($data2->error)) {
+    if (!isset($data2->error)) {
         setcookie(
             "patreon_session_id",
             $data2->access_token,
             time() + $data2->expires_in,
-            "/"
+            "/music/"
         );
         setcookie(
             "patreon_refesh_token",
             $data2->refresh_token,
             time() + $data2->expires_in,
-            "/"
+            "/music/"
         );
         setcookie(
             "patreon_scope",
             $data2->scope,
             time() + $data2->expires_in,
-            "/"
+            "/music/"
         );
         $loginrequired = false;
     }
-
 }
 
 ?>
@@ -72,18 +71,19 @@ if (!isset($_GET["code"]) || isset($_COOKIE["patreon_refesh_token"]) && isset($_
 
 <body>
     <?php
-    
-        echo $loginrequired;
-        if($loginrequired === true) {
-            echo "Please go to patreon to login and confirm membership!<br>";
-            echo '<a href="https://www.patreon.com/oauth2/authorize?response_type=code&client_id=8cTqpdX2R801HOisCTqBz69Di4OulIONj6jt8r75HP8fKk_HTTBTbQgNrsYa1alo&redirect_uri=http://localhost/music/patreonperks/">Login to access content!</a>';
-        } elseif ($loginrequired === false) {
-            echo "You're Logged in!";
-        } else {
-            echo "there was an error, please login";
-        }
+    if ($loginrequired === false) {
+        echo "You're Logged in!";
+    } else {
+        echo "Please go to patreon to login and confirm membership!<br>";
+        echo '<a href="https://www.patreon.com/oauth2/authorize?response_type=code&client_id=8cTqpdX2R801HOisCTqBz69Di4OulIONj6jt8r75HP8fKk_HTTBTbQgNrsYa1alo&redirect_uri=http://localhost/music/patreonperks/">Login to access content!</a>';
+    }
     ?>
     <p>dev - dev - dev</p>
+    <?php if ($loginrequired === false) { ?>
+    <form action ="logout.php" method = "POST">
+        <button type="submit" name="button"> Submit</button>
+    </form>
+    <?php } ?>
 </body>
 
 </html>
