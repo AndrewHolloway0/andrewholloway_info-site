@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Andrew Holloway | Musician and IT Professional | Portfolios</title>
+    <title>Andrew Holloway | Musician and IT Professional | Resume & Portfolios</title>
     <meta name="description" content="The resume, portfolio & project website for Andrew Holloway of Perth, Western Australia. Here are my projects I've worked on as an IT professional and music creator.">
     <meta name="keywords" content="Portfolio, Music, Technology Professional, Project, Resume, Hire">
     <meta name="author" content="Andrew Holloway">
