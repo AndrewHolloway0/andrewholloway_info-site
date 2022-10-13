@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Andrew Holloway | Musician and IT Professional | Portfolios</title>
     <meta name="description" content="The resume, portfolio & project website for Andrew Holloway of Perth, Western Australia. Here are my projects I've worked on as an IT professional and music creator.">
-    <meta name="keywords" content="Portfolio, Music, Technology Professional">
+    <meta name="keywords" content="Portfolio, Music, Technology Professional, Project, Resume, Hire">
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
