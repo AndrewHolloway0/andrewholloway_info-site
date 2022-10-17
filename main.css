@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300;700&display=swap');
 @import url('/vars.css');
-
+/* main */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ html, body {
     background-color: var(--main-bg-color);
     scroll-behavior: smooth;
 }
-.h0, h1, h2, h3, h4, h5, h6 {
+.h0, .h1, h2, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
 }
@@ -21,28 +21,27 @@ html, body {
     letter-spacing: 1px;
 }
 .h0 {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
     font-size: 134px;
 }
-h1 {
+.h1 {
     font-size: 65px; 
 }
 .h1subtext {
     font-size: 33px;
 }
-h2 {
+h2, .h2 {
     font-size: 44px;
 }
 .h2subtext {
     font-size: 26px;
 }
-h3 {
+.h3 {
     font-size: 32px;
 }
-h4, .h4subtext {
+.h4, .h4subtext {
     font-size: 24px;
 }
+<<<<<<< Updated upstream
 header, footer {
     background-color: var(--headers);
     text-align: center;
@@ -83,13 +82,18 @@ footer #popup-modal-msg.hidden {
     transition: all 1s;
 }
 .content {
+=======
+.container, .content {
+>>>>>>> Stashed changes
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
-    text-align: center;
 }
 .section {
     padding: 45px 0 65px 0;
+}
+.section .container {
+    text-align: center;
 }
 .unselectable {
     -webkit-touch-callout: none;
@@ -100,10 +104,70 @@ footer #popup-modal-msg.hidden {
     user-select: none;
 }
 
+/* header */
+#headscollfix {
+    height: 82px;
+    width: 100%;
+}
+header {
+    background-color: var(--headers);
+    text-align: right;
+    font-size: 21px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    -webkit-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+header #hgrid {
+    display: grid;
+    grid-template-columns: 54px auto;
+    padding: 12px 0;
+}
+header #hlogo img {
+    max-width: 54px;
+}
+header nav {
+    margin: auto 0;
+}
+header nav a {
+    text-decoration: none;
+    padding: 0 4px;
+    margin: 0 6px;
+}
+header nav a:last-child {
+    padding-right: 0;
+}
+
+/* old */
+header div.h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* footer */
+footer {
+    background-color: var(--headers);
+    font-family: 'Roboto', sans-serif;
+    padding: 30px 0;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 21px;
+}
+footer a {
+    padding: 0 20px;
+    text-decoration: none;
+}
+footer .h4 {
+    padding: 10px;
+}
+
+/* index */
 #contact {
     display: grid;
 }
-#contact h2 {
+#contact .h2 {
     padding: 30px;
 }
 #contact .intbuttons {
@@ -137,6 +201,8 @@ footer #popup-modal-msg.hidden {
     height: 41px;
     margin: 10px 30px;
 }
+
+/* different screen rez */
 
 @media screen and (max-width: 800px) {
     /* h1 {

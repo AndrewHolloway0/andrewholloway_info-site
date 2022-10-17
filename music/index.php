@@ -87,10 +87,10 @@
     <div id="frontpage" class="fullpage">
         <div id="maintext">
             <div class="h0">ANDREW HOLLOWAY</div>
-            <h1 class="subtext">music producer | artist | musician</h1>
+            <div class="h1 subtext">music producer | artist | musician</div>
         </div>
         <div id="cornernav">
-            <h4>OTHER PAGES</h4>
+            <div class="h4">OTHER PAGES</div>
             <span class="h4subtext subtext">
                 <a href="/">Home</a>
                 <span>|</span>
@@ -102,7 +102,7 @@
     </div>
     <div id="earlyreleases" class="section">
         <div class="content">
-            <h2>Get Releases Early</h2>
+            <h2 class="h2">Get Releases Early</h2>
             <form>
                 <!-- <input type="email" placeholder="email address" /> -->
                 <!-- <button type="submit">Enter</button> -->
@@ -123,18 +123,23 @@
     <div id="upcoming" class="fullpage">
         <div id="upcomingart"></div>
         <div id="upcomingtxt">
-            <h1>UPCOMING!</h1>
+            <h1 class="h1">Latest Release!</h1>
             <div id="albumartupcoming"></div>
             <div id="albumtxt">
-                <h1 id="albumtitle">"Fruity Bar"</h1>
-                <span class="h1subtext subtext">Out on the 14th of October</span>
+                <h1 class="h1" id="albumtitle">"Fruity Bar"</h1>
+                <span class="h1subtext subtext">Out Now!</span>
             </div>
         </div>
     </div>
     <div id="discography" class="section">
         <div class="content">
-            <h2>Discography</h2>
+            <h2 class="h2">Discography</h2>
             <div id="albumsandsingles">
+                <a class="discoitem" id="d-04">
+                    <div class="discoart"></div>
+                    <span class="discotitle">Fruity Bar</span>
+                    <span class="discotype">Single</span>
+                </a>
                 <a class="discoitem" id="d-03">
                     <div class="discoart"></div>
                     <span class="discotitle">This Week</span>
@@ -160,7 +165,7 @@
     </div>
     <div id="about" class="section">
         <div class="content">
-            <h2>About</h2>
+            <h2 class="h2">About</h2>
             <div id="aboutcontent">
                 <div id="aboutimg"></div>
                 <div id="abouttxt">
@@ -185,7 +190,7 @@
     </div>
     <div id="contact" class="section">
         <div class="content">
-            <h2>Contact</h2>
+            <h2 class="h2">Contact</h2>
             <div>
                 <a href="mailto:localmusicproduced+homeweb@gmail.com" class="intbuttons">Business Inquiry</a>
                 <a href="https://www.paypal.com/donate/?business=NVEPYM738GEHJ&no_recurring=0&currency_code=AUD"
@@ -201,10 +206,10 @@
                     <a href="https://open.spotify.com/artist/2sbHQ4QlPdaefcIUNctmYl" target="_blank">
                         <img src="/media/icons/spotify.svg" alt="spotify" />
                     </a>
-                    <a href="https://twitter.com/eww_disgusting" target="_blank">
+                    <a href="https://twitter.com/andrewhollowaym" target="_blank">
                         <img src="/media/icons/twitter.svg" alt="twitter" />
                     </a>
-                    <a href="https://www.youtube.com/channel/UCUPrXBGMPUKiB7j1BDgoU5w" target="_blank">
+                    <a href="https://www.youtube.com/@andrewhollowaym" target="_blank">
                         <img src="/media/icons/youtube.svg" alt="youtube" />
                     </a>
                 </div>

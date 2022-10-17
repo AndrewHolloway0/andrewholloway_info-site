@@ -1,4 +1,6 @@
 :root {
+    --main-accent: rgb(47, 123, 236);
+    --dark-accent: rgb(24, 26, 39);
     --main-bg-color: #1a1a1a;
     --headers: #232323;
     --mainwhite: #fff;

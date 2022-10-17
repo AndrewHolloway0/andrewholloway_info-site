@@ -24,33 +24,33 @@
 
 <body>
     <header>
-        <h3>Andrew Holloway</h3>
+        <div class="h3">Andrew Holloway</div>
     </header>
     <div class="content">
         <div id="introduction">
-            <h1>hi there!</h1>
-            <p class="h1subtext subtext">Select the portfolio</p>
+            <div class="h1">hi there!</div>
+            <p class="h1subtext subtext">select the portfolio</p>
         </div>
         <a href="/music" id="musicianartist" class="module unselectable">
             <div class="moduletext">
-                <h2>Andrew Holloway</h2>
+                <div class="h2">Andrew Holloway</div>
                 <p class="h2subtext subtext">musician & artist</p>
             </div>
-            <h2 class="comingsoontxt">Coming Soon</h2>
+            <div class="h2 comingsoontxt">Coming Soon</div>
         </a>
         <a id="itprofessional" class="module comingsoon unselectable">
             <div class="moduletext">
-                <h2>Andrew Holloway</h2>
+                <div class="h2">Andrew Holloway</div>
                 <p class="h2subtext subtext">it professional</p>
             </div>
-            <h2 class="comingsoontxt">Coming Soon</h2>
+            <div class="h2 comingsoontxt">Coming Soon</div>
         </a>
         <a id="programmer" class="module comingsoon unselectable">
             <div class="moduletext">
-                <h2>Andrew Holloway</h2>
+                <div class="h2">Andrew Holloway</div>
                 <p class="h2subtext subtext">programmer</p>
             </div>
-            <h2 class="comingsoontxt">Coming Soon</h2>
+            <div class="h2 comingsoontxt">Coming Soon</div>
         </a>
         <div id="contact">
             <h2>Contact</h2>

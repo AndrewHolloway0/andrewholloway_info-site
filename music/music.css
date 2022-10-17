@@ -28,6 +28,10 @@
     display: none;
 }
 
+.content {
+    text-align: center;
+}
+
 .fullpage {
     height: 100vh;
     display: grid;
@@ -166,6 +170,7 @@
     width: 100%;
     padding-top: 40px;
     justify-items: center;
+    row-gap: 25px;
 }
 
 #discography .discoitem {
@@ -197,6 +202,10 @@
 #discography .discotitle {
     font-size: 22px;
     padding-top: 12px;
+}
+
+#d-04 .discoart {
+    background-image: url("/media/discography/d-04.jpg");
 }
 
 #d-03 .discoart {

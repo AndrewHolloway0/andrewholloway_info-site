@@ -11,6 +11,7 @@
     text-decoration: none;
     transition: all 0.5s, transform 1.2s;
     cursor: pointer;
+    text-align: center;
 }
 .module:hover {
     transform: scale(1.08);
@@ -43,6 +44,15 @@
 }
 .module#programmer {
     background-image: url("/media/programmermodule.jpg");
+}
+
+/* NEW */
+.section#intro {
+    background:
+        linear-gradient(135deg, transparent 21px, var(--dark-accent) 22px, var(--dark-accent) 24px, transparent 24px, transparent 67px, var(--dark-accent) 67px, var(--dark-accent) 69px, transparent 69px),
+        linear-gradient(225deg, transparent 21px, var(--dark-accent) 22px, var(--dark-accent) 24px, transparent 24px, transparent 67px, var(--dark-accent) 67px, var(--dark-accent) 69px, transparent 69px)0 64px;
+        background-color: rgb(15,15,15);
+        background-size: 64px 128px;
 }
 
 @media screen and (max-width: 780px) {
