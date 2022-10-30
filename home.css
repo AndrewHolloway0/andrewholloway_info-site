@@ -1,82 +1,114 @@
 @import url('/vars.css');
-.module {
-    border: 0;
-    border-radius: 10px;
-    height: 181px;
-    min-width: 722px;
-    margin: 12px auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-y: center;
-    text-decoration: none;
-    transition: all 0.5s, transform 1.2s;
-    cursor: pointer;
+
+section {
+    padding: 40px 20px;
     text-align: center;
-}
-.module:hover {
-    transform: scale(1.08);
-}
-.comingsoon > div {
-    transition: opacity 0.1s;
-}
-.comingsoon:hover > div {
-    opacity: 0;
-}
-.comingsoontxt {
-    margin-top: -20px;
-    opacity: 0;
-    transition: all 0.3s;
-}
-.comingsoon:hover > .comingsoontxt {
-    opacity: 1;
-}
-#introduction {
-    padding: 50px 0 20px 0;
-}
-.moduletext {
-    transform: translate(0, 50%);
-}
-.module#musicianartist {
-    background-image: url("/media/musicianartistmodule.jpg");
-}
-.module#itprofessional {
-    background-image: url("/media/itprofessionalmodule.jpg");
-}
-.module#programmer {
-    background-image: url("/media/programmermodule.jpg");
+    display: grid;
+    gap: 35px;
 }
 
-/* NEW */
-.section#intro {
-    background:
-        linear-gradient(135deg, transparent 21px, var(--dark-accent) 22px, var(--dark-accent) 24px, transparent 24px, transparent 67px, var(--dark-accent) 67px, var(--dark-accent) 69px, transparent 69px),
-        linear-gradient(225deg, transparent 21px, var(--dark-accent) 22px, var(--dark-accent) 24px, transparent 24px, transparent 67px, var(--dark-accent) 67px, var(--dark-accent) 69px, transparent 69px)0 64px;
-        background-color: rgb(15,15,15);
-        background-size: 64px 128px;
+section.purp-gradient-bg {
+    background: linear-gradient(
+        rgb(30, 18, 32),
+        rgb(24 15 28 / 40%)
+    );
 }
 
-@media screen and (max-width: 780px) {
-    .module {
-        height: 160px;
-        min-width: 510px;
-    }
-    .moduletext {
-        transform: translate(0, 46%);
-    }
-    .comingsoontxt {
-        margin-top: -32px;
-    }
+section .header h2 {
+    margin-bottom: 25px;
 }
 
-@media screen and (max-width: 570px) {
-    header > h3 {
-        padding: 10px;
-    }
-    .module {
-        height: 130px;
-        min-width: 345px;
-    }
-    .moduletext {
-        transform: translate(0, 40%);
-    }
+section .header p {
+    line-height: 1.9rem;
+    font-size: 1.1rem;
+}
+
+.content {
+    display: grid;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.box-highlighted {
+    border: 2px solid var(--infobox-selected);
+}
+
+.box {
+    background-color: var(--infobox);
+    border-radius: 5px;
+    padding: 30px 20px;
+    width: 220px;
+    margin-inline: auto;
+    box-shadow: rgb(0 0 0 / 30%) 0 0 18px;
+    display: grid;
+    gap: 14px;
+}
+
+.box .box-title {
+    font-size: 1.3rem;
+}
+
+.box .box-desc {
+    font-size: 1.25rem;
+}
+
+.box .box-image {
+    width: 97px;
+    height: 97px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(200deg) brightness(104%) contrast(103%);
+    margin: auto;
+    margin-bottom: 8px;
+}
+
+.box .box-image#scc {
+    background-image: url('/media/icons/school.svg');
+}
+
+.box .box-image#trs {
+    background-image: url('/media/icons/retail.svg');
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    border: var(--clr-accent) solid 5px;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 1.13rem;
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+/* page changes */
+
+main section {
+    padding-top: 20px;
+}
+
+main #ahollowaytxt p {
+    padding-block: 1rem;
+    font-size: 1.18rem;
+}
+
+main #summary {
+    padding-block: 30px;
+    width: auto;
+}
+
+main #summary p {
+    line-height: 1.9rem;
+    font-size: 1.1rem;
+}
+
+
+
+@media screen and (min-width: 570px) {
+
+}
+
+@media screen and (min-width: 800px) {
+
 }
