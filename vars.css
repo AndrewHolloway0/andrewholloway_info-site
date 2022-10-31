@@ -1,6 +1,5 @@
 :root {
     --main-accent: rgb(47, 123, 236);
-    --dark-accent: rgb(24, 26, 39);
     --main-bg-color: #1a1a1a;
     --headers: #232323;
     --mainwhite: #fff;
@@ -8,7 +7,9 @@
     --midgray: #666;
 
     --clr-accent: #A74BEC;
-    --infobox: hsl(0, 0%, 38%, 0.32);
+    --infobox: hsl(0, 0%, 40%, 0.4);
     --infobox-selected: hsl(56, 100%, 55%, 0.23);
+    --infobox-blue: hsl(236, 91%, 75%, 0.4);
     --clr-mainwhite: #fff;
+    --clr-header-activated: rgb(24 26 39 / 90%);
 }

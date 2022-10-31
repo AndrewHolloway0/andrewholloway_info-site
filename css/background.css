@@ -1,0 +1,129 @@
+header, section {
+    position: relative;
+    z-index: 1;
+}
+
+#bodybg {
+    position: absolute;    
+    z-index: 0;
+    overflow: hidden;
+    width: 100vw;
+    padding-bottom: 20px;
+}
+.bgball {
+    filter: blur(22px) saturate(1.1);
+    background-image: linear-gradient(
+      #DDBC6E,
+      #BB6ADC,
+      #7B73E9
+    );
+    border-radius: 50%;
+    animation: automove1 45s ease-in-out alternate infinite;
+    margin: auto;
+}
+.size1 {
+    width: 140px;
+    height: 140px;
+    background-image: linear-gradient(-90deg,
+      #DDBC6E,
+      #BB6ADC,
+      #7B73E9
+    );
+    filter: blur(16px) saturate(1.1);
+}
+.size2 {
+    width: 215px;
+    height: 215px;
+    background-image: linear-gradient(-120deg,
+      #DDBC6E,
+      #BB6ADC,
+      #7B73E9
+    );
+    animation: automove2 45s ease-in-out alternate infinite;
+    filter: blur(16px) saturate(1.1);
+}
+.size3 {
+    width: 265px;
+    height: 265px;
+    background-image: linear-gradient(35deg,
+      #DDBC6E,
+      #BB6ADC,
+      #7B73E9
+    );
+    filter: blur(19px) saturate(1.1);
+}
+.size4 {
+    width: 315px;
+    height: 315px;
+    background-image: linear-gradient(60deg,
+      #DDBC6E,
+      #BB6ADC,
+      #7B73E9
+    );
+}
+.size5 {
+    width: 350px;
+    height: 350px;
+    background-image: linear-gradient(110deg,
+      #DDBC6E,
+      #BB6ADC,
+      #7B73E9
+    );
+    animation: automove2 45s ease-in-out alternate infinite;
+    filter: blur(26px) saturate(1.1);
+}
+
+.bgball[index="1"] {
+    margin-top: 160px;
+    margin-right: -40px;
+}
+
+.bgball[index="2"] {
+    margin-top: 240px;
+    margin-left: -20px;
+}
+
+.bgball[index="3"] {
+    margin-top: 300px;
+    margin-right: -20px;
+}
+
+.bgball[index="4"] {
+    margin-top: 260px;
+    margin-left: 10px;
+}
+
+.bgball[index="5"] {
+    margin-top: 260px;
+    margin-right: 10px;
+}
+
+.bgball[index="6"] {
+    margin-top: 300px;
+    margin-left: -30px;
+}
+
+.bgball[index="7"] {
+    margin-top: 160px;
+    margin-right: 60px;
+}
+
+.bgball[index="8"] {
+    margin-top: 650px;
+    margin-right: -20px;
+}
+
+.bgball[index="9"] {
+    margin-top: 260px;
+    margin-left: -10px;
+}
+
+.bgball[index="10"] {
+    margin-top: 320px;
+    margin-right: -20px;
+}
+
+.bgball[index="11"] {
+    margin-top: 200px;
+    margin-left: 10px;
+}

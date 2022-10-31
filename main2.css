@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300;700&display=swap');
 @import url('/vars.css');
-@import url('/hamburgers.css');
+@import url('/css/hamburgers.css');
+@import url('/css/background.css');
 /* main */
 *, *::before, *::after {
     margin: 0;
@@ -19,78 +20,14 @@ html, body {
     background-size: cover;
     scroll-behavior: smooth;
 }
-
-/* background */
-#bodybg {
-    position: absolute;    
-    z-index: 0;
-}
-header, section {
+/* :target::before {
+    content: "";
     position: relative;
-    z-index: 1;
+    visibility: none;
+    height: 80px; 
+    margin-top: -80px;
 }
-.bgball {
-    filter: blur(22px);
-    background-image: linear-gradient(
-      #DDBC6E,
-      #BB6ADC,
-      #7B73E9
-    );
-    border-radius: 50%;
-    animation: automove1 45s ease-in-out alternate infinite;
-    margin: 50px;
-  }
-  .size1 {
-    width: 140px;
-    height: 140px;
-    background-image: linear-gradient(-90deg,
-      #DDBC6E,
-      #BB6ADC,
-      #7B73E9
-    );
-    filter: blur(16px);
-  }
-  .size2 {
-    width: 215px;
-    height: 215px;
-    background-image: linear-gradient(-120deg,
-      #DDBC6E,
-      #BB6ADC,
-      #7B73E9
-    );
-    animation: automove2 45s ease-in-out alternate infinite;
-    filter: blur(16px);
-  }
-  .size3 {
-    width: 265px;
-    height: 265px;
-    background-image: linear-gradient(35deg,
-      #DDBC6E,
-      #BB6ADC,
-      #7B73E9
-    );
-    filter: blur(19px);
-  }
-  .size4 {
-    width: 315px;
-    height: 315px;
-    background-image: linear-gradient(60deg,
-      #DDBC6E,
-      #BB6ADC,
-      #7B73E9
-    );
-  }
-  .size5 {
-    width: 350px;
-    height: 350px;
-    background-image: linear-gradient(110deg,
-      #DDBC6E,
-      #BB6ADC,
-      #7B73E9
-    );
-    animation: automove2 45s ease-in-out alternate infinite;
-    filter: blur(26px);
-  }
+*/
 
 /* defaults */
 
@@ -115,6 +52,22 @@ header {
     position: fixed;
     top: 0;
     z-index: 2;
+    transition: all 140ms ease;
+}
+
+/* when mobile nav bar open */
+/* style head bg */
+header:has(#head-bottom.activated) {
+    background-color: var(--clr-header-activated);
+}
+/* show social btns */
+header:has(#head-bottom.activated) .head-socials {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+}
+header:has(#head-bottom.activated) #head-logo {
+    opacity: 1 !important;
 }
 
 header .wrapper {
@@ -131,12 +84,8 @@ header #head-top {
 
 header .head-socials {
     opacity: 0;
-    transition: opacity 500ms;
-}
-
-header .head-socials.activated {
-    display: block;
-    opacity: 1;
+    transition: opacity 300ms;
+    visibility: collapse;
 }
 
 header .head-socials img {
@@ -152,18 +101,20 @@ header #head-logo {
     background-size: contain;
     width: 54px;
     height: 54px;
+    margin-right: 32px;
+    transition: opacity 150ms;
 }
 
 header #head-bottom {
     max-height: 0;
-    display: none;
+    /* display: none; */
     overflow: hidden;
-    transition: max-height ease-out 500ms;
+    transition: max-height ease-out 200ms;
 }
 
 header #head-bottom.activated {
     max-height: 100%;
-    display: block;
+    /* display: block; */
 }
 
 header button {
@@ -174,9 +125,10 @@ header nav li {
     list-style-type: none;
     display: block;
     text-align: center;
-    padding-block: 1rem;
-    margin: 0.4rem auto;
-    background-color: var(--infobox);
+    padding-block: 1.2rem;
+    margin-block: 8px;
+    background-color: var(--infobox-blue);
+    border-radius: 5px;
 }
 
 header nav a {
@@ -191,7 +143,25 @@ header nav a {
 /* footer */
 
 footer {
-    display: block;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    background-image: linear-gradient(
+        rgba(35, 24, 44, 0),
+        #23182C 40%
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+}
+footer .wrapper {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+}
+footer #footlinks {
+    display: flex;
+    justify-content: space-around;
 }
 
 /* different screen rez */

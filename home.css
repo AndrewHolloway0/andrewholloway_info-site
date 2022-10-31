@@ -1,7 +1,7 @@
 @import url('/vars.css');
 
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
     display: grid;
     gap: 35px;
@@ -14,19 +14,10 @@ section.purp-gradient-bg {
     );
 }
 
-section .header h2 {
-    margin-bottom: 25px;
-}
-
-section .header p {
-    line-height: 1.9rem;
-    font-size: 1.1rem;
-}
-
 .content {
     display: grid;
     gap: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .box-highlighted {
@@ -62,12 +53,44 @@ section .header p {
     margin-bottom: 8px;
 }
 
-.box .box-image#scc {
+section#skills .box, section#portfolios .box {
+    background-color: var(--infobox-blue);
+}
+
+.box .box-image.scc {
     background-image: url('/media/icons/school.svg');
 }
 
-.box .box-image#trs {
+.box .box-image.trs {
     background-image: url('/media/icons/retail.svg');
+}
+
+.box .box-image.networking {
+    background-image: url('/media/icons/networking.svg');
+}
+
+.box .box-image.business {
+    background-image: url('/media/icons/business.svg');
+}
+
+.box:has(> .box-image.amazon) {
+    display: none;
+}
+
+.box .box-image.amazon {
+    background-image: url('/media/icons/amazon.svg');
+}
+
+.box .box-image.music {
+    background-image: url('/media/icons/music_ind.svg');
+}
+
+.box .box-image.program {
+    background-image: url('/media/icons/programming.svg');
+}
+
+.box .box-image.web {
+    background-image: url('/media/icons/websites.svg');
 }
 
 .btn {
@@ -75,14 +98,42 @@ section .header p {
     text-decoration: none;
     border: var(--clr-accent) solid 5px;
     border-radius: 5px;
-    padding: 10px 25px;
-    font-size: 1.13rem;
+    padding: 10px 30px;
+    font-size: 1.16rem;
     display: block;
     width: fit-content;
     margin-inline: auto;
 }
 
+.btn-container .btn:not(:first-child) {
+    margin-top: 15px;
+}
+
 /* page changes */
+
+section .header {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+section .header h2 {
+    margin-bottom: 25px;
+}
+
+section .header p {
+    line-height: 1.9rem;
+    font-size: 1.1rem;
+}
+
+section#experience {
+    clip-path: polygon(50% 0, 100% 3%, 100% 97%, 0 100%, 0 3%);
+    padding-block: 80px;
+}
+
+section#education {
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 97%);
+    padding-bottom: 80px;
+}
 
 main section {
     padding-top: 20px;
@@ -96,12 +147,14 @@ main #ahollowaytxt p {
 main #summary {
     padding-block: 30px;
     width: auto;
+    max-width: 680px;
 }
 
 main #summary p {
     line-height: 1.9rem;
     font-size: 1.1rem;
 }
+
 
 
 

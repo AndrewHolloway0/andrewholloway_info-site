@@ -1,28 +1,30 @@
 <footer>
-    <h4>Andrew Holloway &copy;
-        <?php
+    <div class="wrapper">
+        <h4>Andrew Holloway &copy;
+            <?php
 
-        if ($_SERVER['SERVER_NAME'] == "development.andrewholloway.info" || $_SERVER['SERVER_NAME'] == "localhost") {
-            echo "Development";
-        } else {
-            echo date("Y");
-        }
+            if ($_SERVER['SERVER_NAME'] == "development.andrewholloway.info" || $_SERVER['SERVER_NAME'] == "localhost") {
+                echo "Development";
+            } else {
+                echo date("Y");
+            }
 
-        ?>
-    </h4>
-    <div id="footlinks">
-        <a href="/sitemap.txt">site map</a>
-        <a href="mailto:localmusicproduced+web@gmail.com">contact</a>
-    </div>
-    <?php if (isset($_GET['proudMessage'])) { ?>
-        <div id="popup-modal-msg" <?php if (isset($_GET['proudType'])) { echo ' class="' . $_GET['proudType'] . '"'; } ?>>
-            <span><?php echo $_GET['proudMessage']; ?></span>
+            ?>
+        </h4>
+        <div id="footlinks">
+            <a href="/sitemap.txt">site map</a>
+            <a href="mailto:localmusicproduced+web@gmail.com">contact</a>
         </div>
-        <script>
-            var proudPopup = document.getElementById("popup-modal-msg");
-            setTimeout(function() {
-                proudPopup.classList.add("hidden");
-            }, 3000);
-        </script>
-    <?php } ?>
+        <?php if (isset($_GET['proudMessage'])) { ?>
+            <div id="popup-modal-msg" <?php if (isset($_GET['proudType'])) { echo ' class="' . $_GET['proudType'] . '"'; } ?>>
+                <span><?php echo $_GET['proudMessage']; ?></span>
+            </div>
+            <script>
+                var proudPopup = document.getElementById("popup-modal-msg");
+                setTimeout(function() {
+                    proudPopup.classList.add("hidden");
+                }, 3000);
+            </script>
+        <?php } ?>
+    </div>
 </footer>

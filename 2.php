@@ -10,22 +10,67 @@
     <link rel="icon" href="/favicon.png?v=0002" />
     <link rel="stylesheet" href="main2.css" />
     <link rel="stylesheet" href="home.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
+        function mobileNavToggle() {
+            var mobilenavburger = document.getElementById("head-mobnav").children;
+            var mobilenav = document.getElementById("head-bottom");
+
+            mobilenavburger[0].classList.toggle("is-active");
+            mobilenav.classList.toggle("activated");
+        }
+
+        function resetMobNav() {
+            var mobilenavburger = document.getElementById("head-mobnav").children;
+            var mobilenav = document.getElementById("head-bottom");
+
+            mobilenavburger[0].classList.remove("is-active");
+            mobilenav.classList.remove("activated");
+        }
+
+        function hideLogoOnScroll() {
+            var ajhlogo = document.getElementById("head-logo");
+            if (jQuery(window).scrollTop() >= 50) {
+                ajhlogo.style.opacity = 0;
+            } else {
+                ajhlogo.style.opacity = 1;
+            }
+            // alert(document.body.scrollY);
+        }
+
+        window.onscroll = function() {
+            resetMobNav();
+            hideLogoOnScroll();
+        }
+
+        var body = document.body,
+            html = document.documentElement;
+
+        var height = Math.max( body.scrollHeight, body.offsetHeight, 
+            html.clientHeight, html.scrollHeight, html.offsetHeight );
         
+        alert(height);
+
     </script>
 </head>
 
 <body>
     <div id="bodybg">
-        <div class="bgball size1"></div>
-        <div class="bgball size2"></div>
-        <div class="bgball size3"></div>
-        <div class="bgball size4"></div>
-        <div class="bgball size5"></div>
+        <div index="1" class="bgball size2"></div>
+        <div index="2" class="bgball size1"></div>
+        <div index="3" class="bgball size3"></div>
+        <div index="4" class="bgball size1"></div>
+        <div index="5" class="bgball size1"></div>
+        <div index="6" class="bgball size3"></div>
+        <div index="7" class="bgball size1"></div>
+        <div index="8" class="bgball size4"></div>
+        <div index="9" class="bgball size2"></div>
+        <div index="10" class="bgball size4"></div>
+        <div index="11" class="bgball size1"></div>
     </div>
     <?php require("./includes/header.php"); ?>
     <main>
-        <section id="main">
+        <section>
             <div id="ahollowaytxt">
                 <h1><span class="clr-accent">Andrew</span> Holloway</h1>
                 <p>IT PROFESSIONAL AND ENTHUSIAST</p>
@@ -53,12 +98,12 @@
         </div>
         <div class="content">
             <div class="box box-highlighted">
-                <div id="scc" class="box-image"></div>
+                <div class="box-image scc"></div>
                 <div class="box-title heading">Seton Catholic College</div>
                 <div class="box-desc">ICT Officer</div>
             </div>
             <div class="box">
-                <div id="trs" class="box-image"></div>
+                <div class="box-image trs"></div>
                 <div class="box-title heading">The Reject Shop</div>
                 <div class="box-desc">Team Leader</div>
             </div>
@@ -76,21 +121,21 @@
         </div>
         <div class="content">
             <div class="box">
-                    <div class="box-image"></div>
-                    <div class="box-title heading">Diploma</div>
-                    <div class="box-desc">IT Networking</div>
-                </div>
-                <div class="box">
-                    <div class="box-image"></div>
-                    <div class="box-title heading">Certificate IV</div>
-                    <div class="box-desc">Business</div>
-                </div>
-                <div class="box">
-                    <div class="box-image"></div>
-                    <div class="box-title heading">Certification</div>
-                    <div class="box-desc">AWS Architect</div>
-                </div>
+                <div class="box-image networking"></div>
+                <div class="box-title heading">Diploma</div>
+                <div class="box-desc">IT Networking</div>
             </div>
+            <div class="box">
+                <div class="box-image business"></div>
+                <div class="box-title heading">Certificate IV</div>
+                <div class="box-desc">Business</div>
+            </div>
+            <div class="box">
+                <div class="box-image amazon"></div>
+                <div class="box-title heading">Certification</div>
+                <div class="box-desc">AWS Architect</div>
+            </div>
+        </div>
         <a href="#" class="btn">LEARN MORE</a>
     </section>
     <section id="education" class="purp-gradient-bg">
@@ -103,17 +148,17 @@
         </div>
         <div class="content">
             <div class="box box-highlighted">
-                <div class="box-image"></div>
+                <div class="box-image networking"></div>
                 <div class="box-title heading">Diploma</div>
                 <div class="box-desc">IT Networking</div>
             </div>
             <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image business"></div>
                 <div class="box-title heading">Certificate IV</div>
                 <div class="box-desc">Business</div>
             </div>
             <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image music"></div>
                 <div class="box-title heading">Certificate II</div>
                 <div class="box-desc">Music Industry</div>
             </div>
@@ -131,15 +176,15 @@
         </div>
         <div class="content">
             <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image music"></div>
                 <div class="box-title heading">Music</div>
             </div>
             <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image program"></div>
                 <div class="box-title heading">Programming</div>
             </div>
             <div class="box">
-                <div class="box-image"></div>
+                <div class="box-image web"></div>
                 <div class="box-title heading">Websites</div>
             </div>
         </div>
