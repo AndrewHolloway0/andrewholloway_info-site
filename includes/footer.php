@@ -3,7 +3,7 @@
         <h4>Andrew Holloway &copy;
             <?php
 
-            if ($_SERVER['SERVER_NAME'] == "development.andrewholloway.info" || $_SERVER['SERVER_NAME'] == "localhost") {
+            if ($_SERVER['SERVER_NAME'] !== "andrewholloway.info") {
                 echo "Development";
             } else {
                 echo date("Y");
@@ -13,7 +13,7 @@
         </h4>
         <div id="footlinks">
             <a href="/sitemap.txt">site map</a>
-            <a href="mailto:localmusicproduced+web@gmail.com">contact</a>
+            <a href="mailto:site@andrewholloway.info">contact</a>
         </div>
         <?php if (isset($_GET['proudMessage'])) { ?>
             <div id="popup-modal-msg" <?php if (isset($_GET['proudType'])) { echo ' class="' . $_GET['proudType'] . '"'; } ?>>

@@ -3,14 +3,28 @@ header, section {
     z-index: 1;
 }
 
-#bodybg {
+/* #bodybg {
     position: absolute;    
     z-index: 0;
     overflow: hidden;
     width: 100vw;
     padding-bottom: 20px;
+} */
+#bodybg {
+    z-index: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 900px;
+    margin-inline: auto;
+    translate: scale(1.1);
 }
 .bgball {
+    position: absolute;
     filter: blur(22px) saturate(1.1);
     background-image: linear-gradient(
       #DDBC6E,
@@ -74,13 +88,13 @@ header, section {
 }
 
 .bgball[index="1"] {
-    margin-top: 160px;
-    margin-right: -40px;
+    top: 160px;
+    right: -40px;
 }
 
 .bgball[index="2"] {
-    margin-top: 240px;
-    margin-left: -20px;
+    top: 20px;
+    left: -140px;
 }
 
 .bgball[index="3"] {
@@ -127,3 +141,45 @@ header, section {
     margin-top: 200px;
     margin-left: 10px;
 }
+
+
+@keyframes automove1 {
+    0% {
+      transform: translate(0,0) rotate(0deg);
+    }
+    20% {
+      transform: translate(-8px,-12px) rotate(40deg);
+    }
+    40% {
+      transform: translate(6px,-3px) rotate(10deg);
+    }
+    60% {
+      transform: translate(-19px,8px) rotate(-40deg);
+    }
+    80% {
+      transform: translate(8px,0) rotate(20deg);
+    }
+    100% {
+      transform: translate(-3px,12px) rotate(60deg);
+    }
+  }
+  @keyframes automove2 {
+    0% {
+      transform: translate(6px,0) rotate(0deg);
+    }
+    20% {
+      transform: translate(-2px,12px) rotate(40deg);
+    }
+    40% {
+      transform: translate(-8px,3px) rotate(10deg);
+    }
+    60% {
+      transform: translate(19px,-8px) rotate(-40deg);
+    }
+    80% {
+      transform: translate(-8px,0) rotate(20deg);
+    }
+    100% {
+      transform: translate(3px,-12px) rotate(60deg);
+    }
+  }

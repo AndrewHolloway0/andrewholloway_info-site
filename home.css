@@ -28,9 +28,6 @@ section.purp-gradient-bg {
     margin-inline: auto;
 }
 
-.box-highlighted {
-    border: 2px solid var(--infobox-selected);
-}
 
 .box {
     background-color: var(--infobox);
@@ -46,6 +43,11 @@ section.purp-gradient-bg {
     text-decoration: none;
     transition: transform 250ms ease-in-out;
     box-sizing: border-box;
+    border: 0;
+}
+
+.box.box-highlighted {
+    border: 2px solid var(--infobox-selected);
 }
 
 a.box:hover, button.box:hover,
