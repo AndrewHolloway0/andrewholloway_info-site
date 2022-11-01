@@ -196,20 +196,20 @@
                 <a href="https://www.paypal.com/donate/?business=NVEPYM738GEHJ&no_recurring=0&currency_code=AUD"
                     class="intbuttons" target="_blank">Donate</a>
                 <button class="intbuttons" id="socialbutton" onclick="socialCardToggle();">Socials</button>
-                <div id="socialcard">
-                    <a href="https://www.instagram.com/rectath_nehb/" target="_blank">
+                <div id="socialcard" target="_blank">
+                    <a href="https://www.instagram.com/rectath_nehb/">
                         <img src="/media/icons/insta.svg" alt="instagram" />
                     </a>
-                    <a href="https://www.linkedin.com/in/andrew-holloway/" target="_blank">
+                    <a href="https://www.linkedin.com/in/andrew-holloway/">
                         <img src="/media/icons/linkedin.svg" alt="linkedin" />
                     </a>
-                    <a href="https://open.spotify.com/artist/2sbHQ4QlPdaefcIUNctmYl" target="_blank">
+                    <a href="https://open.spotify.com/artist/2sbHQ4QlPdaefcIUNctmYl">
                         <img src="/media/icons/spotify.svg" alt="spotify" />
                     </a>
-                    <a href="https://twitter.com/andrewhollowaym" target="_blank">
+                    <a href="https://twitter.com/andrewhollowaym">
                         <img src="/media/icons/twitter.svg" alt="twitter" />
                     </a>
-                    <a href="https://www.youtube.com/@andrewhollowaym" target="_blank">
+                    <a href="https://www.youtube.com/@andrewhollowaym">
                         <img src="/media/icons/youtube.svg" alt="youtube" />
                     </a>
                 </div>

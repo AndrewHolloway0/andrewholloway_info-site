@@ -1,10 +1,10 @@
-<div id="head-scollfix"></div>
+<div id="head-scrollfix"></div>
 <header>
     <div class="wrapper">
         <div id="head-top">
             <div class="head-socials">
-                <a href="#"><img src="/media/icons/email.svg" alt="email"/></a>
-                <img src="/media/icons/linkedin.svg" alt="linkedin"/>
+                <a href="mailto:andrew.k.holloway+site@hotmail.com" target="_blank"><img src="/media/icons/email.svg" alt="email"/></a>
+                <a href="https://www.linkedin.com/in/andrew-holloway/" target="_blank"><img src="/media/icons/linkedin.svg" alt="linkedin"/></a>
             </div>
             <div id="head-logo"></div>
             <div id="head-mobnav">
