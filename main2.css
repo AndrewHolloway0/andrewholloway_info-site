@@ -21,10 +21,14 @@ html, body {
     scroll-behavior: smooth;
 }
 
-*:focus {
+*:focus-visible {
     outline: auto;
     outline-offset: 6px;
     overflow: visible;
+}
+
+a {
+    text-decoration: none;
 }
 /* :target::before {
     content: "";
@@ -63,16 +67,16 @@ header {
 
 /* when mobile nav bar open */
 /* style head bg */
-header:has(#head-bottom.activated) {
+header.activated {
     background-color: var(--clr-header-activated);
 }
 /* show social btns */
-header:has(#head-bottom.activated) .head-socials {
+header.activated .head-socials {
     opacity: 1;
     display: block;
     visibility: visible;
 }
-header:has(#head-bottom.activated) #head-logo {
+header.activated #head-logo {
     opacity: 1 !important;
 }
 
@@ -137,10 +141,6 @@ header nav li {
     margin-block: 8px;
     background-color: var(--infobox-blue);
     border-radius: 5px;
-}
-
-header nav a {
-    text-decoration: none;
 }
 
 #head-scrollfix {

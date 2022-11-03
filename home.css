@@ -94,10 +94,6 @@ section#skills .box, section#portfolios .box {
     background-image: url('/media/icons/business.svg');
 }
 
-.box:has(> .box-image.amazon) {
-    display: none;
-}
-
 .box .box-image.amazon {
     background-image: url('/media/icons/amazon.svg');
 }
@@ -125,6 +121,12 @@ section#skills .box, section#portfolios .box {
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin-inline: auto;
+    transition: background-color 70ms ease-in;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--clr-accent);
 }
 
 .btn-container .btn:not(:first-child) {
@@ -182,7 +184,10 @@ main #summary p {
     font-size: 1.1rem;
 }
 
-
+section#contact .btn-container a {
+    display: inline-block;
+    margin-inline: 15px;
+}
 
 
 @media screen and (min-width: 810px) {
@@ -239,10 +244,12 @@ main #summary p {
         max-width: 1350px;
         margin-inline: auto;
     }
+
     section#portfolios .header {
         max-width: 410px;
         text-align: right;
     }
+    
     section#portfolios .content {
         margin-top: 0;
         grid-template-columns: 1fr 1fr 1fr !important;

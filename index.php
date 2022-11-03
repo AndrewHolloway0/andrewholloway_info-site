@@ -14,18 +14,22 @@
     <script>
         function mobileNavToggle() {
             var mobilenavburger = document.getElementById("head-mobnav").children;
-            var mobilenav = document.getElementById("head-bottom");
+            var headerBottom = document.getElementById("head-bottom");
+            var header = document.getElementsByTagName("header");
 
             mobilenavburger[0].classList.toggle("is-active");
-            mobilenav.classList.toggle("activated");
+            headerBottom.classList.toggle("activated");
+            header[0].classList.toggle("activated");
         }
 
         function resetMobNav() {
             var mobilenavburger = document.getElementById("head-mobnav").children;
-            var mobilenav = document.getElementById("head-bottom");
+            var headerBottom = document.getElementById("head-bottom");
+            var header = document.getElementsByTagName("header");
 
             mobilenavburger[0].classList.remove("is-active");
-            mobilenav.classList.remove("activated");
+            headerBottom.classList.remove("activated");
+            header[0].classList.remove("activated");
         }
 
         function hideLogoOnScroll() {
@@ -97,12 +101,12 @@
             </p>
         </div>
         <div class="content">
-            <button class="box box-highlighted">
+            <button tabindex="10" class="box box-highlighted">
                 <div class="box-image scc"></div>
                 <div class="box-title heading">Seton Catholic College</div>
                 <div class="box-desc">ICT Officer</div>
             </button>
-            <button class="box">
+            <button tabindex="11" class="box">
                 <div class="box-image trs"></div>
                 <div class="box-title heading">The Reject Shop</div>
                 <div class="box-desc">Team Leader</div>
@@ -120,23 +124,23 @@
             </p>
         </div>
         <div class="content">
-            <button class="box" onclick="openBoxInfo('networking')">
+            <button tabindex="12" class="box" onclick="openBoxInfo('networking')">
                 <div class="box-image networking"></div>
                 <div class="box-title heading">Diploma</div>
                 <div class="box-desc">IT Networking</div>
             </button>
-            <button class="box" onclick="openBoxInfo('business')">
+            <button tabindex="13" class="box" onclick="openBoxInfo('business')">
                 <div class="box-image business"></div>
                 <div class="box-title heading">Certificate IV</div>
                 <div class="box-desc">Business</div>
             </button>
-            <button class="box" onclick="openBoxInfo('aws')">
+            <button style="display:none;" tabindex="14" class="box" onclick="openBoxInfo('aws')">
                 <div class="box-image amazon"></div>
                 <div class="box-title heading">Certification</div>
                 <div class="box-desc">AWS Architect</div>
             </button>
         </div>
-        <a href="#" class="btn">LEARN MORE</a>
+        <a tabindex="15" href="#" class="btn">LEARN MORE</a>
     </section>
     <section id="education" class="purp-gradient-bg">
         <div class="header">
@@ -147,17 +151,17 @@
             </p>
         </div>
         <div class="content">
-            <button class="box box-highlighted">
+            <button tabindex="16" class="box box-highlighted">
                 <div class="box-image networking"></div>
                 <div class="box-title heading">Diploma</div>
                 <div class="box-desc">IT Networking</div>
             </button>
-            <button class="box">
+            <button tabindex="17" class="box">
                 <div class="box-image business"></div>
                 <div class="box-title heading">Certificate IV</div>
                 <div class="box-desc">Business</div>
             </button>
-            <button class="box">
+            <button tabindex="18" class="box">
                 <div class="box-image music"></div>
                 <div class="box-title heading">Certificate II</div>
                 <div class="box-desc">Music Industry</div>
@@ -175,7 +179,7 @@
             </p>
         </div>
         <div class="content">
-            <a href="/music" class="box">
+            <a tabindex="19" href="/music/" class="box">
                 <div class="box-image music"></div>
                 <div class="box-title heading">Music</div>
             </a>
@@ -199,8 +203,8 @@
             </p>
         </div>
         <div class="btn-container">
-            <a href="mailto:andrew.k.holloway+site@hotmail.com" class="btn">Business Inquiry</a>
-            <a href="https://www.linkedin.com/in/andrew-holloway/" class="btn" target="_blank">LinkedIn</a>
+            <a tabindex="20" href="mailto:andrew.k.holloway+site@hotmail.com" class="btn">Business Inquiry</a>
+            <a tabindex="21" href="https://www.linkedin.com/in/andrew-holloway/" class="btn" target="_blank">LinkedIn</a>
         </div>
     </section>
     <?php require("./includes/footer.php"); ?>
