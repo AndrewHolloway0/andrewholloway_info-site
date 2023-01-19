@@ -1,15 +1,15 @@
 @import url('/vars.css');
 
 section {
-    padding: 50px 20px;
+    padding: 5rem 2rem;
     text-align: center;
     display: grid;
-    gap: 35px;
+    gap: 3.5rem;
     grid-template-areas: 'header' 'webcontent';
 }
 
 section .wrapper {
-    max-width: 1405px;
+    max-width: 140.5rem;
 }
 
 section.purp-gradient-bg {
@@ -21,8 +21,8 @@ section.purp-gradient-bg {
 
 .content {
     display: grid;
-    gap: 40px;
-    margin-top: 20px;
+    gap: 4rem;
+    margin-top: 2rem;
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin-inline: auto;
@@ -31,50 +31,50 @@ section.purp-gradient-bg {
 
 .box {
     background-color: var(--infobox);
-    border-radius: 5px;
-    padding: 30px 20px;
-    width: 220px;
+    border-radius: 0.5rem;
+    padding-block: 2.6rem;
+    /* width: 220px; */
     margin-inline: auto;
-    box-shadow: rgb(0 0 0 / 30%) 0 0 18px;
+    box-shadow: rgb(0 0 0 / 30%) 0 0 1.8rem;
     display: grid;
-    gap: 14px;
-    min-width: 246px;
-    min-height: 246px;
+    gap: 1rem;
+    min-width: 21.2rem;
+    min-height: 21rem;
     text-decoration: none;
     transition: transform 250ms ease-in-out;
     box-sizing: border-box;
     border: 0;
 }
 
-.box.box-highlighted {
+.box-highlighted {
     border: 2px solid var(--infobox-selected);
 }
 
-a.box:hover, button.box:hover,
-a.box:focus-visible, button.box:focus-visible {
+a.box[onclick]:hover, button.box[onclick]:hover,
+a.box[onclick]:focus-visible, button.box[onclick]:focus-visible {
     transform: scale(1.05);
     cursor: pointer;
 }
 
 .box .box-title {
-    font-size: 1.3rem;
+    font-size: calc(var(--font-size) + 0.2rem);
 }
 
 .box .box-desc {
-    font-size: 1.25rem;
+    font-size: var(--font-size);
 }
 
 .box .box-image {
-    width: 97px;
-    height: 97px;
+    width: 8rem;
+    height: 8rem;
     background-repeat: no-repeat;
     background-size: contain;
     filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(200deg) brightness(104%) contrast(103%);
     margin: auto;
-    margin-bottom: 8px;
+    margin-bottom: 0.8rem;
 }
 
-section#skills .box, section#portfolios .box {
+section:nth-of-type(even) .box {
     background-color: var(--infobox-blue);
 }
 
@@ -113,10 +113,10 @@ section#skills .box, section#portfolios .box {
 .btn {
     display: inline-block;
     text-decoration: none;
-    border: var(--clr-accent) solid 5px;
-    border-radius: 5px;
-    padding: 10px 30px;
-    font-size: 1.16rem;
+    border: var(--clr-accent) solid 0.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem 3rem;
+    font-size: var(--font-size);
     display: block;
     max-width: -moz-fit-content;
     max-width: fit-content;
@@ -125,12 +125,63 @@ section#skills .box, section#portfolios .box {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-within {
     background-color: var(--clr-accent);
 }
 
 .btn-container .btn:not(:first-child) {
-    margin-top: 15px;
+    margin-top: 1.5rem;
+}
+
+.grayed-out, button.box:not([onclick]) {
+    filter: grayscale(1) contrast(35%);
+    box-shadow: none;
+}
+
+#infoBoxPopup {
+    position: fixed;
+    inset: 0;
+    color: white;
+    background-color: hsla(0, 0%, 0%, 0.2);
+    z-index: 2;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+#infoBoxPopupContent {
+    position: relative;
+    margin-inline: 2rem;
+    z-index: 3;
+    background-color: var(--main-bg-color);
+    padding: 1.8rem 2.2rem;
+    max-width: 60rem;
+    border-radius: 0.5rem;
+    box-shadow: rgb(0 0 0 / 30%) 0 0 1.8rem;
+}
+#infoBoxPopupContent p {
+    line-height: 2.8rem;
+    margin-bottom: 0.8rem;
+}
+p#serviceLength {
+    margin-bottom: 1.6rem;
+}
+#rolePosition::before {
+    content: 'Position: ';
+    font-weight: 700;
+}
+
+#roleIndustry::before {
+    content: 'Industry: ';
+    font-weight: 700;
+}
+#roleDesc::before {
+    content: 'Role Details: ';
+    font-weight: 700;
+}
+#infoContent::before {
+    content: 'What I\'ve Learnt: ';
+    display: block;
+    font-weight: 700;
 }
 
 /* page changes */
@@ -140,72 +191,90 @@ section .content {
 }
 
 section .header {
-    max-width: 600px;
+    max-width: 60rem;
     margin-inline: auto;
     grid-area: header;
 }
 
 section .header h2 {
-    margin-bottom: 25px;
+    font-size: calc(var(--font-size) + 1.2rem);
+    margin-bottom: 2.5rem;
 }
 
 section .header p {
-    line-height: 1.9rem;
-    font-size: 1.1rem;
+    line-height: calc(var(--font-size) + 1.2rem);
 }
 
 section#experience {
     clip-path: polygon(50% 0, 100% 3%, 100% 97%, 0 100%, 0 3%);
-    padding-block: 80px;
+    padding-block: 8rem;
 }
 
 section#education {
     clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 97%);
-    padding-bottom: 80px;
+    padding-bottom: 8rem;
 }
 
 main section {
-    padding-top: 20px;
+    padding-top: 2rem;
+}
+
+main section h2 {
+    margin-bottom: 0.5rem;
 }
 
 main #ahollowaytxt p {
     padding-block: 1rem;
-    font-size: 1.18rem;
+    font-size: var(--font-size);
 }
 
 main #summary {
-    padding-block: 30px;
+    padding: 3rem 1.2rem;
     width: auto;
-    max-width: 680px;
+    max-width: 68rem;
 }
 
 main #summary p {
-    line-height: 1.9rem;
-    font-size: 1.1rem;
+    line-height: calc(var(--font-size) + 1.2rem);
 }
 
 section#contact .btn-container a {
     display: inline-block;
-    margin-inline: 15px;
+    margin-inline: 1.5rem;
 }
 
 
-@media screen and (min-width: 810px) {
+/* Tablet (M) screen size (800px) */
+/* @media screen and (min-width: 50rem) {
 
-}
+} */
 
-@media screen and (min-width: 1100px) {
+/* PC (L) screen size (1100px) */
+@media screen and (min-width: 68.75rem) {
     /* general */
+    main #summary {
+        padding: 3rem;
+    }
+
     section .content {
         grid-template-columns: 1fr 1fr !important;
     }
 
-    section .header h2, main section .header h2 {
-        font-size: 2.1rem;
+    .box {
+        padding: 30px 20px;
+        min-width: 246px;
+        min-height: 246px;
+    }
+    .box .box-image {
+        width: 97px;
+        height: 97px;
     }
 
-    section .header p {
-        font-size: 1.1rem;
+    #roleIndustry {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: inherit;
     }
 
     /* skills */
@@ -254,4 +323,9 @@ section#contact .btn-container a {
         margin-top: 0;
         grid-template-columns: 1fr 1fr 1fr !important;
     }
+}
+
+/* Large PC (XL) screen size (2180px) */
+@media screen and (min-width: 136.25rem) {
+
 }

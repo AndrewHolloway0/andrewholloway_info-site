@@ -8,10 +8,11 @@
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
-    <link rel="stylesheet" href="main2.css" />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="/css/main2.css" />
+    <link rel="stylesheet" href="/css/home.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script>
+    <script type="text/javascript" src="/scripts/writeups.js"></script>
+    <script defer>
         function mobileNavToggle() {
             var mobilenavburger = document.getElementById("head-mobnav").children;
             var headerBottom = document.getElementById("head-bottom");
@@ -42,18 +43,56 @@
             // alert(document.body.scrollY);
         }
 
+        
+        function openBoxInfo(type) {
+            var body = document.getElementsByTagName("body");
+            var infoBox = document.getElementById("infoBoxPopup");
+            var contentTitle = document.getElementById("infoBoxPopupContent").getElementsByTagName("h3")[0];
+            var roleIndustry = document.getElementById("roleIndustry");
+            var serviceLength = document.getElementById("serviceLength");
+            var roleTitle = document.getElementById("rolePosition");
+            var roleDesc = document.getElementById("roleDesc");
+            var content = document.getElementById("infoContent");
+
+            if(type === "scc") {
+                contentTitle.innerHTML = scc.title;
+                serviceLength.innerHTML = `${scc.timeframe.start} - ${scc.timeframe.end}`;
+                roleIndustry.innerHTML = `${scc.role.industry}`;
+                roleTitle.innerHTML = `${scc.role.title}`;
+                roleDesc.innerHTML = `${scc.role.details}`;
+                content.innerHTML = `${scc.content}`;
+            } else if (type === "trs") {
+                contentTitle.innerHTML = trs.title;
+                serviceLength.innerHTML = `${trs.timeframe.start} - ${trs.timeframe.end}`;
+                roleIndustry.innerHTML = `${trs.role.industry}`;
+                roleTitle.innerHTML = `${trs.role.title}`;
+                roleDesc.innerHTML = `${trs.role.details}`;
+                content.innerHTML = `${trs.content}`;
+            } else {
+                contentTitle.innerHTML = "Error 404";
+                serviceLength.innerHTML = ``;
+                roleIndustry.innerHTML = ``;
+                roleTitle.innerHTML = ``;
+                roleDesc.innerHTML = ``;
+                content.innerHTML = ``;
+            }
+            console.log(`opening ${type}`);
+
+            body[0].style.overflow = "hidden";
+            infoBox.style.display = "flex";
+        }
+
+        function closeInfoBox() {
+            var body = document.getElementsByTagName("body");
+            var infoBox = document.getElementById("infoBoxPopup");
+            body[0].style.overflow = "";
+            infoBox.style.display = "none";
+        }
+
         window.onscroll = function() {
             resetMobNav();
             hideLogoOnScroll();
         }
-
-        var body = document.body,
-            html = document.documentElement;
-
-        var height = Math.max( body.scrollHeight, body.offsetHeight, 
-            html.clientHeight, html.scrollHeight, html.offsetHeight );
-        
-        alert(height);
 
     </script>
 </head>
@@ -73,6 +112,16 @@
         <div index="11" class="bgball size1"></div>
     </div>
     <?php require("./includes/header.php"); ?>
+    <div id="infoBoxPopup" onclick="closeInfoBox()">
+        <div id="infoBoxPopupContent">
+            <h3></h3>
+            <p id="serviceLength"></p>
+            <p id="rolePosition"></p>
+            <p id="roleIndustry"></p>
+            <p id="roleDesc"></p>
+            <p id="infoContent"></p>
+        </div>
+    </div>
     <main>
         <section>
             <div id="ahollowaytxt">
@@ -101,12 +150,12 @@
             </p>
         </div>
         <div class="content">
-            <button tabindex="0" class="box box-highlighted">
+            <button tabindex="0" class="box box-highlighted" onclick="openBoxInfo('scc')">
                 <div class="box-image scc"></div>
                 <div class="box-title heading">Seton Catholic College</div>
                 <div class="box-desc">ICT Officer</div>
             </button>
-            <button tabindex="0" class="box">
+            <button tabindex="0" class="box" onclick="openBoxInfo('trs')">
                 <div class="box-image trs"></div>
                 <div class="box-title heading">The Reject Shop</div>
                 <div class="box-desc">Team Leader</div>
@@ -124,21 +173,21 @@
             </p>
         </div>
         <div class="content">
-            <button tabindex="0" class="box" onclick="openBoxInfo('networking')">
+            <a tabindex="0" class="box">
                 <div class="box-image networking"></div>
                 <div class="box-title heading">Diploma</div>
                 <div class="box-desc">IT Networking</div>
-            </button>
-            <button tabindex="0" class="box" onclick="openBoxInfo('business')">
+            </a>
+            <a tabindex="0" class="box">
                 <div class="box-image business"></div>
                 <div class="box-title heading">Certificate IV</div>
                 <div class="box-desc">Business</div>
-            </button>
-            <button style="display:none;" tabindex="0" class="box" onclick="openBoxInfo('aws')">
+            </a>
+            <a style="display:none;" tabindex="0" class="box">
                 <div class="box-image amazon"></div>
                 <div class="box-title heading">Certification</div>
                 <div class="box-desc">AWS Architect</div>
-            </button>
+            </a>
         </div>
         <a tabindex="0" href="#" class="btn">LEARN MORE</a>
     </section>
@@ -183,11 +232,11 @@
                 <div class="box-image music"></div>
                 <div class="box-title heading">Music</div>
             </a>
-            <div class="box">
+            <div class="box grayed-out" title="Coming Soon!">
                 <div class="box-image program"></div>
                 <div class="box-title heading">Programming</div>
             </div>
-            <div class="box">
+            <div class="box grayed-out" title="Coming Soon!">
                 <div class="box-image web"></div>
                 <div class="box-title heading">Websites</div>
             </div>

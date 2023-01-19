@@ -108,7 +108,7 @@ header, section {
 }
 
 .bgball[index="5"] {
-    margin-top: 260px;
+    margin-top: 1060px;
     margin-right: 10px;
 }
 
@@ -119,12 +119,12 @@ header, section {
 
 .bgball[index="7"] {
     margin-top: 160px;
-    margin-right: 60px;
+    left: 50px;
 }
 
 .bgball[index="8"] {
-    margin-top: 650px;
-    margin-right: -20px;
+    margin-top: 690px;
+    right: 0;
 }
 
 .bgball[index="9"] {
