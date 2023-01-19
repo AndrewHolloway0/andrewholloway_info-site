@@ -51,7 +51,7 @@ section.purp-gradient-bg {
 }
 
 a.box:hover, button.box:hover,
-a.box:focus, button.box:focus {
+a.box:focus-visible, button.box:focus-visible {
     transform: scale(1.05);
     cursor: pointer;
 }

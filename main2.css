@@ -19,6 +19,8 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     scroll-behavior: smooth;
+    /* font-size: 64.5%; */
+    scroll-margin-top: 8rem;
 }
 
 *:focus-visible {
@@ -57,8 +59,8 @@ h1 {
 /* header */
 header {
     background-color: transparent;
-    width: 100vw;
     margin-inline: auto;
+    min-width: -webkit-fill-available;
     position: fixed;
     top: 0;
     z-index: 2;

@@ -12,8 +12,8 @@
             ?>
         </h4>
         <div id="footlinks">
-            <a tabindex="99" href="/sitemap.txt">site map</a>
-            <a tabindex="100" href="mailto:site@andrewholloway.info">contact</a>
+            <a tabindex="0" href="/sitemap.txt">site map</a>
+            <a tabindex="0" href="mailto:site@andrewholloway.info">contact</a>
         </div>
         <?php if (isset($_GET['proudMessage'])) { ?>
             <div id="popup-modal-msg" <?php if (isset($_GET['proudType'])) { echo ' class="' . $_GET['proudType'] . '"'; } ?>>
