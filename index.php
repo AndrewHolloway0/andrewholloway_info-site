@@ -8,76 +8,283 @@
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
-    <link rel="stylesheet" href="main.css" />
-    <link rel="stylesheet" href="home.css" />
-    <script>
-        function socialCardToggle() {
-            var socialCard = document.getElementById("socialcard");
-            if (socialCard.style.display === "inherit") {
-                socialCard.style.display = "none";
-            } else {
-                socialCard.style.display = "inherit";
-            }
+    <link rel="stylesheet" href="/css/main2.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="/scripts/writeups.js"></script>
+    <script defer>
+        function mobileNavToggle() {
+            var mobilenavburger = document.getElementById("head-mobnav").children;
+            var headerBottom = document.getElementById("head-bottom");
+            var header = document.getElementsByTagName("header");
+
+            mobilenavburger[0].classList.toggle("is-active");
+            headerBottom.classList.toggle("activated");
+            header[0].classList.toggle("activated");
         }
+
+        function resetMobNav() {
+            var mobilenavburger = document.getElementById("head-mobnav").children;
+            var headerBottom = document.getElementById("head-bottom");
+            var header = document.getElementsByTagName("header");
+
+            mobilenavburger[0].classList.remove("is-active");
+            headerBottom.classList.remove("activated");
+            header[0].classList.remove("activated");
+        }
+
+        function hideLogoOnScroll() {
+            var ajhlogo = document.getElementById("head-logo");
+            if (jQuery(window).scrollTop() >= 50) {
+                ajhlogo.style.opacity = 0;
+            } else {
+                ajhlogo.style.opacity = 1;
+            }
+            // alert(document.body.scrollY);
+        }
+
+        
+        function openBoxInfo(type) {
+            var body = document.getElementsByTagName("body");
+            var infoBox = document.getElementById("infoBoxPopup");
+            var contentTitle = document.getElementById("infoBoxPopupContent").getElementsByTagName("h3")[0];
+            // var roleIndustry = document.getElementById("roleIndustry");
+            var timeframeLength = document.getElementById("timeLength");
+            var rolePosition = document.getElementById("rolePosition");
+            var roleDesc = document.getElementById("roleDesc");
+            var learnt = document.getElementById("infoContent");
+            writeups.forEach((v, i) => {
+                if(type === v.code) {
+                    contentTitle.innerHTML = v.title;
+                    timeframeLength.innerHTML = `${v.timeframe.start} - ${v.timeframe.end}`;
+                    rolePosition.innerHTML = `${v.role}`;
+                    roleDesc.innerHTML = `${v.learnt.details}`;
+                    
+                    learnt.innerHTML = ``;
+                    v.learnt.items.forEach((vv,ii) => {
+                        learnt.innerHTML += `<li>${vv}</li>`;
+                    })
+
+                    infoBox.style.display = "flex";
+                    
+                    if(v.type === "Education") {
+                        rolePosition.style.display = "none";
+                        // timeframeLength.innerHTML = `${v.timeframe.complete}`;
+                    } else {
+                        rolePosition.style.display = "";
+                    }
+                }
+            })
+        }
+
+        function updateInfoBox(val, i) {
+            if(type === writeups[i].code) {
+                contentTitle.innerHTML = writeups[i].title
+            }
+            console.log(`${i}`)
+        }
+
+        function closeInfoBox() {
+            var body = document.getElementsByTagName("body");
+            var infoBox = document.getElementById("infoBoxPopup");
+            // body[0].style.overflow = "";
+            infoBox.style.display = "none";
+        }
+
+
+
+        window.onscroll = function() {
+            resetMobNav();
+            hideLogoOnScroll();
+            let ahSignatureWrap = document.getElementById("ahsignatureWrapper");
+            observer.observe(ahSignatureWrap);
+        }
+
+        $(document).on("keydown", function(event) {
+            if (event.keyCode === 27 || event.keyCode === 9) {
+                closeInfoBox();
+            }
+        });
+        
+        // Create an intersection observer
+        const observer = new IntersectionObserver((entries) => {
+            let ahSignature = document.getElementById("ahsignature");
+            // Check if the element is visible
+            if (entries[0].isIntersecting) {
+                // Add the class that triggers the animation
+                ahSignature.classList.add('show');
+            } else {
+                // Remove the class that clears the animation
+                ahSignature.classList.remove('show');
+            }
+        });
+
     </script>
 </head>
 
 <body>
-    <header>
-        <h3>Andrew Holloway</h3>
-    </header>
-    <div class="content">
-        <div id="introduction">
-            <h1>hi there!</h1>
-            <p class="h1subtext subtext">Select the portfolio</p>
-        </div>
-        <a href="/music" id="musicianartist" class="module">
-            <div class="moduletext">
-                <h2>Andrew Holloway</h2>
-                <p class="h2subtext subtext">musician & artist</p>
-            </div>
-            <h2 class="comingsoontxt">Coming Soon</h2>
-        </a>
-        <a id="itprofessional" class="module comingsoon unselectable">
-            <div class="moduletext">
-                <h2>Andrew Holloway</h2>
-                <p class="h2subtext subtext">it professional</p>
-            </div>
-            <h2 class="comingsoontxt">Coming Soon</h2>
-        </a>
-        <a id="programmer" class="module comingsoon unselectable">
-            <div class="moduletext">
-                <h2>Andrew Holloway</h2>
-                <p class="h2subtext subtext">programmer</p>
-            </div>
-            <h2 class="comingsoontxt">Coming Soon</h2>
-        </a>
-        <div id="contact">
-            <h2>Contact</h2>
-            <div>
-                <a href="mailto:localmusicproduced+homeweb@gmail.com" class="intbuttons">Business Inquiry</a>
-                <a href="https://www.paypal.com/donate/?business=NVEPYM738GEHJ&no_recurring=0&currency_code=AUD" class="intbuttons" target="_blank">Donate</a>
-                <button class="intbuttons" id="socialbutton" onclick="socialCardToggle();">Socials</button>
-                <div id="socialcard">
-                    <a href="https://www.instagram.com/rectath_nehb/" target="_blank">
-                        <img src="/media/icons/insta.svg" alt="instagram" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/andrew-holloway/" target="_blank">
-                        <img src="/media/icons/linkedin.svg" alt="linkedin" />
-                    </a>
-                    <a href="https://open.spotify.com/artist/2sbHQ4QlPdaefcIUNctmYl" target="_blank">
-                        <img src="/media/icons/spotify.svg" alt="spotify" />
-                    </a>
-                    <a href="https://twitter.com/eww_disgusting" target="_blank">
-                        <img src="/media/icons/twitter.svg" alt="twitter" />
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCUPrXBGMPUKiB7j1BDgoU5w" target="_blank">
-                        <img src="/media/icons/youtube.svg" alt="youtube" />
-                    </a>
-                </div>
-            </div>
+    <div id="bodybg">
+        <div index="1" class="bgball size2"></div>
+        <div index="2" class="bgball size1"></div>
+        <div index="3" class="bgball size3"></div>
+        <div index="4" class="bgball size1"></div>
+        <div index="5" class="bgball size1"></div>
+        <div index="6" class="bgball size3"></div>
+        <div index="7" class="bgball size1"></div>
+        <div index="8" class="bgball size4"></div>
+        <div index="9" class="bgball size2"></div>
+        <div index="10" class="bgball size4"></div>
+        <div index="11" class="bgball size1"></div>
+    </div>
+    <?php require("./includes/header.php"); ?>
+    <div id="infoBoxPopup" onclick="closeInfoBox()">
+        <div id="infoBoxPopupContent">
+            <h3></h3>
+            <p id="timeLength"></p>
+            <p id="rolePosition"></p>
+            <p id="roleDesc"></p>
+            <p id="infoContent"></p>
         </div>
     </div>
+    <main>
+        <section>
+            <div id="ahollowaytxt">
+                <h1><span class="clr-accent">Andrew</span> Holloway</h1>
+                <p>IT PROFESSIONAL AND ENTHUSIAST</p>
+            </div>
+            <div id="summary" class="box box-highlighted">
+                <h2>Executive Summary</h2>
+                <p>
+                    I am a motivated and experienced individual with a demonstrated history working 
+                    professionally and efficiency in fast pasted environments. I am highly skilled in 
+                    advanced computer networking, team leadership, and programming languages such as 
+                    .NET CLR, HTML, and ReactJS (+Typescript). I take pride in my customer-focused work 
+                    ethic and my ability to plan, document and communicate tasks for future repeatability 
+                    and cohesive knowledge across a team.
+                </p>
+            </div>
+        </section>
+    </main>
+    <section id="experience" class="purp-gradient-bg">
+        <div class="header">
+            <h2>Experience & Roles</h2>
+            <p>
+                All of my previous roles provided me helpful experience in handling pressure,
+                time, and communication. Below, I show my growth, click for more info.
+            </p>
+        </div>
+        <div class="content">
+            <button tabindex="0" class="box box-highlighted" onclick="openBoxInfo('scc')">
+                <div class="box-image scc"></div>
+                <div class="box-title heading">Seton Catholic College</div>
+                <div class="box-desc">ICT Officer</div>
+            </button>
+            <button tabindex="0" class="box" onclick="openBoxInfo('trs')">
+                <div class="box-image trs"></div>
+                <div class="box-title heading">The Reject Shop</div>
+                <div class="box-desc">Team Leader</div>
+            </button>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="header">
+            <h2>Skills & Certifications</h2>
+            <p>
+                I've always had a passion to learn and grow
+                my knowledge. In the time I've been working,
+                I've also been studying. Here are some of
+                the certifications and skills I've acquired.
+            </p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="box-image networking"></div>
+                <div class="box-title heading">Diploma</div>
+                <div class="box-desc">IT Networking</div>
+            </div>
+            <div class="box">
+                <div class="box-image business"></div>
+                <div class="box-title heading">Certificate IV</div>
+                <div class="box-desc">Business</div>
+            </div>
+            <div style="display:none;" tabindex="0" class="box">
+                <div class="box-image amazon"></div>
+                <div class="box-title heading">Certification</div>
+                <div class="box-desc">AWS Architect</div>
+            </div>
+        </div>
+        <!-- <a tabindex="0" href="#" class="btn">Learn More</a> -->
+    </section>
+    <section id="education" class="purp-gradient-bg">
+        <div class="header">
+            <h2>Education History</h2>
+            <p>
+                As and example of my passion and drive, during my final year of high school I was also
+                studying Cyber Security and Music Industry at South Metropolitan TAFE.
+            </p>
+        </div>
+        <div class="content">
+            <button tabindex="0" class="box box-highlighted" onclick="openBoxInfo('networking')">
+                <div class="box-image networking"></div>
+                <div class="box-title heading">Diploma</div>
+                <div class="box-desc">IT Networking</div>
+            </button>
+            <button tabindex="0" class="box" onclick="openBoxInfo('business')">
+                <div class="box-image business"></div>
+                <div class="box-title heading">Certificate IV</div>
+                <div class="box-desc">Business</div>
+            </button>
+            <button tabindex="0" class="box" onclick="openBoxInfo('music')">
+                <div class="box-image music"></div>
+                <div class="box-title heading">Certificate II</div>
+                <div class="box-desc">Music Industry</div>
+            </button>
+        </div>
+    </section>
+    <section id="portfolios">
+        <div class="header">
+            <h2>Portfolios & Projects</h2>
+            <p>
+                I spend my extra time doing things I love, 
+                which includes creating music, programming
+                and much more. Here I've displayed some 
+                of my most interesting and best projects.
+            </p>
+        </div>
+        <div class="content">
+            <a tabindex="0" href="/music/" class="box">
+                <div class="box-image music"></div>
+                <div class="box-title heading">Music</div>
+            </a>
+            <div class="box grayed-out" title="Coming Soon!">
+                <div class="box-image program"></div>
+                <div class="box-title heading">Programming</div>
+            </div>
+            <div class="box grayed-out" title="Coming Soon!">
+                <div class="box-image web"></div>
+                <div class="box-title heading">Websites</div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="header">
+            <h2>Contact</h2>
+            <p>
+                If your interested in contacting me, feel free below. I'm always looking for new
+                opportunities, and if you think your team could use someone like me, shoot me a
+                message. Chat soon!
+            </p>
+            <div class="btn-container">
+                <a tabindex="0" href="mailto:andrew@andrewholloway.info" class="btn">Email</a>
+                <a tabindex="0" href="https://www.linkedin.com/in/andrew-holloway/" class="btn" target="_blank">LinkedIn</a>
+            </div>
+            <div id="ahsignatureWrapper">
+                <svg id="ahSignatureSVG" data-name="Andrew Holloway's Signature" width="610" height="600" xmlns="http://www.w3.org/2000/svg">
+                    <path id="ahsignature" d="m10.55556,578.36135c14.67086,-14.44612 24.8441,-20.96303 38.5813,-33.10096c13.00725,-11.49296 30.36529,-29.10038 44.5169,-45.71078c18.30575,-21.48626 32.3176,-38.10411 53.42026,-66.20175c13.15259,-17.51235 36.26344,-48.46245 48.96856,-72.50679c17.21808,-32.58509 27.36953,-56.48183 37.09744,-85.11656c11.14974,-32.81986 17.27795,-64.41052 23.74233,-99.30271c5.22864,-28.22224 9.48174,-64.56044 11.87112,-91.42156c1.95924,-22.02538 3.68259,-39.21664 5.9356,-50.43945c2.18838,-10.90059 4.45166,-17.33858 2.9678,-17.33858c-1.48386,0 0,9.45739 0,28.3722c0,22.06725 2.0789,55.18388 2.9678,83.54037c1.48476,47.36572 6.57026,86.65522 8.9034,137.13229c2.0388,44.10956 3.55176,94.63633 5.93552,126.09867c3.23386,42.68221 5.5948,74.10419 7.41954,104.03146c1.25049,20.50854 2.96772,39.40583 2.96772,48.86317c0,11.03362 -1.48386,17.33858 0,17.33858c1.48386,0 -0.07817,-4.7085 -1.48386,-11.03362c-3.14314,-14.14341 -6.19669,-27.24157 -13.35507,-47.28697c-6.35922,-17.80752 -17.16669,-39.80048 -31.16179,-64.62555c-9.94,-17.63193 -18.06194,-34.15418 -32.64573,-52.01573c-8.24983,-10.10405 -18.6543,-18.40955 -25.22627,-22.06725c-4.1565,-2.31338 -5.48068,-4.00551 -7.41946,-3.15248c-1.37092,0.60315 1.04683,3.69814 4.4517,6.30495c8.07536,6.18252 18.85804,8.9413 28.19403,12.60982c11.47644,4.50952 20.77453,4.72867 34.12959,4.72867c11.87121,0 28.19407,-1.57619 40.0652,-4.72867c17.80673,-4.72867 34.12959,-9.45743 47.48466,-14.1861c17.80681,-6.30495 33.48205,-11.32438 48.9686,-23.64349c12.6261,-10.0437 26.32832,-25.99761 34.12959,-39.40583c10.46658,-17.98909 15.26385,-36.14624 19.29067,-55.16817c3.31994,-15.6829 5.19253,-39.34041 5.9356,-53.59197c1.06684,-20.45967 -4.04141,-37.45641 -8.9034,-55.16817c-3.82964,-13.95115 -5.8289,-23.03038 -8.9034,-26.79596c-2.17395,-2.66258 -6.68299,-0.33794 -8.90332,6.30495c-4.57735,13.69464 -4.64631,36.23954 -5.9356,58.32064c-1.74772,29.93234 -2.9678,72.5067 -2.9678,105.60762c0,53.59193 0,92.9978 0,141.86105c0,39.40583 0,77.23537 0,99.30271c0,17.33849 -1.48386,26.79592 1.48394,26.79592c1.48386,0 1.48386,-6.30495 2.96772,-20.49105c1.48394,-14.1861 1.48394,-36.25335 1.48394,-56.7444c0,-15.7623 0,-29.9484 0,-48.86317c0,-12.60991 0.72522,-26.84328 0,-33.10096c-0.74755,-6.45033 -1.44563,-8.38611 1.48386,-7.88115c4.63197,0.7984 14.00505,10.43532 23.74233,18.91477c8.27518,7.20622 22.21046,14.37035 32.64573,17.33858c11.8201,3.3621 20.87495,4.68287 31.16187,3.15248c10.69848,-1.59161 22.7773,-12.16027 31.16179,-23.64353c11.10091,-15.20356 19.29067,-34.67707 25.22619,-48.86317c5.9356,-14.18614 11.30542,-40.84522 13.35507,-59.89688c2.70093,-25.10556 4.33844,-47.45911 1.48394,-74.08298c-2.24022,-20.89454 -12.49062,-37.88245 -16.32287,-53.59193c-1.11664,-4.57754 -1.91849,-7.41956 -2.9678,-6.30495c-1.04931,1.11457 -3.63987,10.93648 -5.9356,31.52468c-2.10173,18.84858 -2.38816,58.39978 1.48394,102.45518c3.6102,41.07536 9.42737,94.50849 13.35507,132.40358c3.42558,33.05091 6.69693,78.91954 10.38726,104.03138c3.72571,25.35229 5.93552,40.98211 7.41946,50.43954"/>
+                </svg>
+            </div>
+        </div>
+    </section>
     <?php require("./includes/footer.php"); ?>
 </body>
 </html>
