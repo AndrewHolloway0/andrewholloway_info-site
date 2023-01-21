@@ -21,8 +21,7 @@ section.purp-gradient-bg {
 
 .content {
     display: grid;
-    gap: 4rem;
-    margin-top: 2rem;
+    gap: 2rem;
     max-width: -moz-fit-content;
     max-width: fit-content;
     margin-inline: auto;
@@ -32,26 +31,29 @@ section.purp-gradient-bg {
 .box {
     background-color: var(--infobox);
     border-radius: 0.5rem;
-    padding-block: 2.6rem;
+    padding: 2.4rem 0.6rem;
     /* width: 220px; */
     margin-inline: auto;
     box-shadow: rgb(0 0 0 / 30%) 0 0 1.8rem;
     display: grid;
     gap: 1rem;
-    min-width: 21.2rem;
-    min-height: 21rem;
+    min-width: 18.2rem;
+    min-height: 18rem;
     text-decoration: none;
     transition: transform 250ms ease-in-out;
     box-sizing: border-box;
     border: 0;
+}
+.box:has(.box-image) {
+    aspect-ratio: 1 / 1;
 }
 
 .box-highlighted {
     border: 2px solid var(--infobox-selected);
 }
 
-a.box[onclick]:hover, button.box[onclick]:hover,
-a.box[onclick]:focus-visible, button.box[onclick]:focus-visible {
+a.box[onclick]:hover, a.box[href]:hover, button.box[onclick]:hover,
+a.box[onclick]:focus-visible, a.box[href]:focus-visible, button.box[onclick]:focus-visible {
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -65,8 +67,8 @@ a.box[onclick]:focus-visible, button.box[onclick]:focus-visible {
 }
 
 .box .box-image {
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     background-repeat: no-repeat;
     background-size: contain;
     filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(200deg) brightness(104%) contrast(103%);
@@ -111,22 +113,47 @@ section:nth-of-type(even) .box {
 }
 
 .btn {
-    display: inline-block;
+    display: inline;
     text-decoration: none;
-    border: var(--clr-accent) solid 0.5rem;
-    border-radius: 0.5rem;
-    padding: 1rem 3rem;
+    /* border: var(--clr-accent) solid 0.5rem; */
+    /* border-radius: 0.5rem; */
+    /* padding: 1rem 3rem; */
+    padding: 0.6rem 0.4rem;
     font-size: var(--font-size);
     display: block;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
+    /* max-width: -moz-fit-content;
+    max-width: fit-content; */
     margin-inline: auto;
     transition: background-color 70ms ease-in;
+    position: relative;
 }
 
-.btn:hover,
-.btn:focus-within {
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
     background-color: var(--clr-accent);
+    bottom: 0;
+    left: 0;
+    transition: width 130ms ease-in;
+    z-index: 1;
+}
+
+.btn:hover::before,
+.btn:focus-within::before {
+    width: 100%;
+    /* background-color: var(--clr-accent); */
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
 }
 
 .btn-container .btn:not(:first-child) {
@@ -147,6 +174,23 @@ section:nth-of-type(even) .box {
     display: none;
     justify-content: center;
     align-items: center;
+}
+#infoBoxPopup li {
+    --lineH: 2.3rem;
+    list-style: none;
+    margin-left: 2.6rem;
+    line-height: var(--lineH);
+}
+#infoBoxPopup li::before {
+    display: block;
+    position: relative;
+    content: '';
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 0.4rem;
+    background-color: white;
+    left: -2.6rem;
+    top: calc(var(--lineH) / 2);
 }
 #infoBoxPopupContent {
     position: relative;
@@ -174,10 +218,10 @@ p#serviceLength {
     content: 'Industry: ';
     font-weight: 700;
 }
-#roleDesc::before {
+/* #roleDesc::before {
     content: 'Role Details: ';
     font-weight: 700;
-}
+} */
 #infoContent::before {
     content: 'What I\'ve Learnt: ';
     display: block;
@@ -238,61 +282,136 @@ main #summary p {
     line-height: calc(var(--font-size) + 1.2rem);
 }
 
+section#contact {
+    content-visibility: auto;
+}
+
 section#contact .btn-container a {
     display: inline-block;
     margin-inline: 1.5rem;
 }
 
+#ahsignatureWrapper {
+    display: inline-block;
+    margin-top: 4rem;
+}
 
-/* Tablet (M) screen size (800px) */
-/* @media screen and (min-width: 50rem) {
+#ahsignatureWrapper::after {
+    display: inherit;
+    position: relative;
+    content: '';
+    width: 3px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    opacity: 0;
+    right: -9px;
+    bottom: 10px;
+}
 
-} */
+#ahSignatureSVG {
+    --size: 140px;
+    height: var(--size);
+    width: var(--size);
+}
 
-/* PC (L) screen size (1100px) */
-@media screen and (min-width: 68.75rem) {
-    /* general */
-    main #summary {
-        padding: 3rem;
+#ahsignature {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 10px;
+    stroke-dasharray: 334rem;
+    stroke-dashoffset: 334rem;
+    transform: scale(0.23);
+}
+
+#ahsignature.show {
+    animation: signatureRun 1.4s cubic-bezier(0.06, 0.29, 0.9, 0.96) 1s 1 forwards;
+}
+
+@supports selector(*:has(body)) {
+    #ahsignatureWrapper:has(#ahsignature.show)::after {
+        animation: signaturedot 0s linear 2.6s 1 forwards;
     }
+    #ahSignatureSVG {
+        margin-left: -3.2rem;
+    }
+}
+@keyframes signaturedot {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
+@keyframes signatureRun {
+    from {
+        stroke-dashoffset: 334rem;
+    }
+    to {
+        stroke-dashoffset: 0rem;
+    }
+}
+
+
+/* Tablet (M) screen size (660px) */
+@media (min-width: 41.25rem) {
     section .content {
         grid-template-columns: 1fr 1fr !important;
     }
-
-    .box {
-        padding: 30px 20px;
-        min-width: 246px;
-        min-height: 246px;
+    section .content {
+        gap: 4rem;
+        margin-top: 2rem;
     }
-    .box .box-image {
-        width: 97px;
-        height: 97px;
+    section#education .content {
+        grid-template-columns: 1fr 1fr 1fr !important;
     }
-
+    section#portfolios .content {
+        margin-top: 0;
+        grid-template-columns: 1fr 1fr 1fr !important;
+    }
     #roleIndustry {
         position: absolute;
         right: 0;
         top: 0;
         padding: inherit;
     }
+}
+
+/* PC (L) screen size (1180.8px) */
+@media (min-width: 73.8rem) {
+    /* general */
+    main #summary {
+        padding: 3rem;
+    }
+
+    .box {
+        padding: 3rem 2rem;
+        min-width: 21.2rem;
+        min-height: 21rem;
+    }
+    .box .box-image {
+        width: 8rem;
+        height: 8rem;
+    }
 
     /* skills */
     section#skills {
         grid-template-areas: 'header webcontent';
-        padding-block: 80px;
-        max-width: 1350px;
+        padding-block: 8rem;
+        max-width: 135rem;
         margin-inline: auto;
     }
 
     section#skills .content {
         margin-top: 0;
-        grid-template-columns: 440px auto;
+        grid-template-columns: 44rem auto;
         grid-template-columns: 1fr 1fr;
     }
 
     section#skills .header {
-        max-width: 410px;
+        max-width: 41rem;
         text-align: left;
     }
 
@@ -302,30 +421,22 @@ section#contact .btn-container a {
         max-width: fit-content;
     }
 
-    section#education .content {
-        grid-template-columns: 1fr 1fr 1fr !important;
-    }
-
     /* portfolios */
     section#portfolios {
         grid-template-areas: 'webcontent header';
-        padding-block: 80px;
-        max-width: 1350px;
+        padding-block: 8rem;
+        max-width: 135rem;
         margin-inline: auto;
     }
 
     section#portfolios .header {
-        max-width: 410px;
+        max-width: 41rem;
         text-align: right;
     }
     
-    section#portfolios .content {
-        margin-top: 0;
-        grid-template-columns: 1fr 1fr 1fr !important;
-    }
 }
 
 /* Large PC (XL) screen size (2180px) */
-@media screen and (min-width: 136.25rem) {
+@media (min-width: 136.25rem) {
 
 }

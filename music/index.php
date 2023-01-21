@@ -92,7 +92,7 @@
         <div id="cornernav">
             <div class="h4">OTHER PAGES</div>
             <span class="h4subtext subtext">
-                <a href="/">Home</a>
+                <a tabindex="0" href="/">Home</a>
                 <span>|</span>
                 <a title="Not Yet Available!">IT Professional</a>
                 <span>|</span>
@@ -104,10 +104,8 @@
         <div class="content">
             <h2 class="h2">Get Releases Early</h2>
             <form>
-                <!-- <input type="email" placeholder="email address" /> -->
-                <!-- <button type="submit">Enter</button> -->
                 <a class="basiccirclebutton" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
-                <a href="/music/patreonperks/">Already subscribed? Click here to access content!</a>
+                <!-- <a href="/music/patreonperks/">Already subscribed? Click here to access content!</a> -->
             </form>
         </div>
     </div>

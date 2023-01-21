@@ -3,7 +3,7 @@
     <div class="wrapper">
         <div id="head-top">
             <div class="head-socials">
-                <a tabindex="0" href="mailto:andrew@andrewholloway.info" target="_blank"><img src="/media/icons/email.svg" alt="email"/></a>
+                <a tabindex="0" href="mailto:andrew@andrewholloway.info"><img src="/media/icons/email.svg" alt="email"/></a>
                 <a tabindex="0" href="https://www.linkedin.com/in/andrew-holloway/" target="_blank"><img src="/media/icons/linkedin.svg" alt="linkedin"/></a>
             </div>
             <div id="head-logo"></div>

@@ -5,7 +5,7 @@
 /* main */
 :root {
     font-size: 62.5%;
-    scroll-margin-top: 8rem;
+    scroll-padding-top: 5rem;
     scroll-behavior: smooth;
 }
 *, *::before, *::after {
@@ -147,6 +147,9 @@ header button {
 
 header nav li {
     list-style-type: none;
+}
+
+header nav li a {
     display: block;
     text-align: center;
     padding-block: 1.2rem;
@@ -187,14 +190,14 @@ footer #footlinks {
 
 /* different screen rez */
 
-/* Tablet (M) screen size (800px) */
-@media screen and (min-width: 50rem) {
+/* Tablet (M) screen size (660px) */
+@media (min-width: 41.25rem) {
     header nav ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    header nav li {
+    header nav li a {
         list-style-type: none;
         display: inline-block;
         padding-block: 0.6rem;
@@ -202,8 +205,8 @@ footer #footlinks {
     }
 }
 
-/* PC (L) screen size (1100px) */
-@media screen and (min-width: 68.75rem) {
+/* PC (L) screen size (1180.8px) */
+@media (min-width: 73.8rem) {
     header {
         background-color: transparent !important;
         position: relative;
@@ -222,13 +225,13 @@ footer #footlinks {
         visibility: visible;
         opacity: 1;
     }
-    header nav li {
+    header nav li a {
         padding: 0;
     }
 }
 
 /* Large PC (XL) screen size (2180px) */
-@media screen and (min-width: 136.25rem) {
+@media (min-width: 136.25rem) {
     :root {
         font-size: 75%;
     }

@@ -15,4 +15,7 @@
     --clr-header-activated: rgb(24 26 39 / 90%);
 
     --font-size: 1.6rem;
+
+    --bp-tablet: 50rem;
+    --bp-desktop: 68.75rem;
 }
