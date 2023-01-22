@@ -105,7 +105,7 @@
             <h2 class="h2">Get Releases Early</h2>
             <form>
                 <a class="basiccirclebutton" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
-                <!-- <a href="/music/patreonperks/">Already subscribed? Click here to access content!</a> -->
+                <a href="/music/patreonperks/">Already subscribed? Click here to access content!</a>
             </form>
         </div>
     </div>
