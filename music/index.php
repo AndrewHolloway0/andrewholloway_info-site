@@ -104,8 +104,6 @@
         <div class="content">
             <h2>Get Releases Early</h2>
             <form>
-                <!-- <input type="email" placeholder="email address" /> -->
-                <!-- <button type="submit">Enter</button> -->
                 <a class="typicalbutton" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
             </form>
         </div>
@@ -126,7 +124,7 @@
             <div id="albumartupcoming"></div>
             <div id="albumtxt">
                 <h1 id="albumtitle">"Fruity Bar"</h1>
-                <span class="h1subtext subtext">Out on the 14th of October</span>
+                <span class="h1subtext subtext">Out Now!</span>
             </div>
         </div>
     </div>
