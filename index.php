@@ -8,6 +8,7 @@
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
+    <link rel=“canonical” href=“https://andrewholloway.info/” />
     <link rel="stylesheet" href="/css/main2.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>

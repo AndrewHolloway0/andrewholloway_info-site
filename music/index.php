@@ -8,6 +8,7 @@
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
+    <link rel=“canonical” href=“https://andrewholloway.info/music/” />
     <link rel="stylesheet" href="/hamburgers.css">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="music.css">
