@@ -67,6 +67,11 @@
     bottom: 90px;
 }
 
+#earlyreleases .content {
+    justify-content: center;
+    text-align: center;
+}
+
 #earlyreleases form {
     padding-top: 30px;
 }
