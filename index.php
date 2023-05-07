@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Andrew Holloway | Musician and IT Professional | Resume & Portfolios</title>
     <meta name="description" content="The resume & portfolio website for Andrew Holloway of Perth, Western Australia. Here are my projects I've worked on as an IT professional and music creator.">
-    <meta name="keywords" content="Portfolio, Music, Technology Professional, Project, Resume, Hire">
+    <meta name="keywords" content="Portfolio, Music, Technology Professional, Project, Resume, Hire, Perth Australia">
     <meta name="author" content="Andrew Holloway">
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
     <link rel="stylesheet" href="/css/main2.css" />
     <link rel="stylesheet" href="/css/home.css" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="/scripts/writeups.js"></script>
     <script defer>
         function mobileNavToggle() {
