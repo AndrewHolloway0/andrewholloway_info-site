@@ -1,5 +1,9 @@
 @import url('/vars.css');
 
+h2, h3 {
+    text-align: center;
+}
+
 #mobilenavigator {
     width: 100vh;
 }
@@ -26,10 +30,6 @@
     top: 15px;
     z-index: 3;
     display: none;
-}
-
-.content {
-    text-align: center;
 }
 
 .fullpage {
@@ -71,14 +71,19 @@
     bottom: 90px;
 }
 
+#earlyreleases .content {
+    justify-content: center;
+    text-align: center;
+}
+
 #earlyreleases form {
     padding-top: 30px;
 }
 
 #earlyreleases input,
 #earlyreleases button,
-.basiccirclebutton {
-    display: block;
+#earlyreleases a,
+.typicalbutton {
     margin: 10px auto;
     padding: 10px 32px;
     border: 0;
@@ -116,7 +121,8 @@
 }
 
 #upcoming #upcomingart {
-    background-image: url("/media/upcomingart.jpg");
+    /* background-image: url("/media/upcomingart.jpg"); */
+    background-image: url("/media/discography/d-06.jpg");
     filter: blur(20px) brightness(0.9);
     -webkit-filter: blur(20px) brightness(0.9);
     -moz-filter: blur(20px) brightness(0.9);
@@ -141,7 +147,8 @@
 
 #upcoming #albumartupcoming {
     margin: 0 auto;
-    background-image: url("/media/upcomingart.jpg");
+    /* background-image: url("/media/upcomingart.jpg"); */
+    background-image: url("/media/discography/d-06.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -166,11 +173,11 @@
 
 #discography #albumsandsingles {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
     width: 100%;
     padding-top: 40px;
     justify-items: center;
-    row-gap: 25px;
 }
 
 #discography .discoitem {
@@ -178,6 +185,7 @@
     grid-template-rows: 180px auto auto;
     width: 180px;
     text-align: left;
+    text-decoration: none;
 }
 
 #discography .discoart {
@@ -202,6 +210,14 @@
 #discography .discotitle {
     font-size: 22px;
     padding-top: 12px;
+}
+
+#d-06 .discoart {
+    background-image: url("/media/discography/d-06.jpg");
+}
+
+#d-05 .discoart {
+    background-image: url("/media/discography/d-05.jpg");
 }
 
 #d-04 .discoart {
@@ -244,6 +260,10 @@
     height: 0;
 }
 
+#socialcard {
+    justify-content: space-around;
+}
+
 @media screen and (max-width: 1120px) {
     #frontpage {
         max-height: 60vh !important;
@@ -279,7 +299,7 @@
     }
 
     #discography #albumsandsingles {
-        grid-template-columns: auto auto auto;
+        grid-template-columns: repeat(3, 1fr);
         width: auto;
         margin: 0 auto;
         gap: 25px;
@@ -323,7 +343,7 @@
     }
 
     #discography #albumsandsingles {
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #about #aboutcontent {
@@ -333,7 +353,7 @@
     #contact .content div {
         display: grid;
         margin: 0 auto;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: repeat(3, 1fr);
     }
 
     #contact .content div a {

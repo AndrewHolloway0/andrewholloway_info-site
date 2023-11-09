@@ -80,6 +80,10 @@ section:nth-of-type(even) .box {
     background-color: var(--infobox-blue);
 }
 
+.box .box-image.code9 {
+    background-image: url('/media/icons/code9.svg');
+}
+
 .box .box-image.scc {
     background-image: url('/media/icons/school.svg');
 }
@@ -358,18 +362,21 @@ section#contact .btn-container a {
 /* Tablet (M) screen size (660px) */
 @media (min-width: 41.25rem) {
     section .content {
-        grid-template-columns: 1fr 1fr !important;
+        grid-template-columns: repeat(3, 1fr) !important;
     }
     section .content {
         gap: 4rem;
         margin-top: 2rem;
     }
+    section#skills .content {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
     section#education .content {
-        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-columns: repeat(3, 1fr) !important;
     }
     section#portfolios .content {
         margin-top: 0;
-        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-columns: repeat(3, 1fr) !important;
     }
     #roleIndustry {
         position: absolute;
