@@ -38,8 +38,10 @@
             var ajhlogo = document.getElementById("head-logo");
             if (jQuery(window).scrollTop() >= 50) {
                 ajhlogo.style.opacity = 0;
+                ajhlogo.style.scale = 0.9;
             } else {
                 ajhlogo.style.opacity = 1;
+                ajhlogo.style.scale = 1;
             }
             // alert(document.body.scrollY);
         }
@@ -157,9 +159,8 @@
             <nav id="head-bottom">
                 <ul>
                     <li><a tabindex="0" href="#summary" onclick="resetMobNav()">summary</a></li>
-                    <li><a tabindex="0" href="#experience" onclick="resetMobNav()">experience</a></li>
-                    <li><a tabindex="0" href="#skills" onclick="resetMobNav()">skills</a></li>
-                    <li><a tabindex="0" href="#education" onclick="resetMobNav()">education</a></li>
+                    <li><a tabindex="0" href="#keyskills" onclick="resetMobNav()">skills</a></li>
+                    <li><a tabindex="0" href="#certifications" onclick="resetMobNav()">certifications</a></li>
                     <li><a tabindex="0" href="#portfolios" onclick="resetMobNav()">portfolios</a></li>
                     <li><a tabindex="0" href="#contact" onclick="resetMobNav()">contact</a></li>
                 </ul>
@@ -189,7 +190,7 @@
             </div>
         </section>
     </main>
-    <section id="experience" class="purp-gradient-bg">
+    <!-- <section id="experience" class="purp-gradient-bg">
         <div class="header">
             <h2>Experience & Roles</h2>
             <p>
@@ -214,8 +215,43 @@
                 <div class="box-desc">Team Leader</div>
             </button>
         </div>
+    </section> -->
+    <section id="keyskills" class="purp-gradient-bg">
+        <div class="header">
+            <h2>Key Skills</h2>
+            <p>
+                All of my previous roles provided me helpful experience in handling pressure,
+                time management, and communication. Below, I show my growth.
+            </p>
+        </div>
+        <div class="content">
+            <div class="card is-style-asterisk">
+                <h3>Attention to Detail</h3>
+                <p>It takes a keen eye to notice the little things in each job, and to take pride in them.</p>
+            </div>
+            <div class="card is-style-asterisk">
+                <h3>Impecible Customer Service</h3>
+                <p>Providing each customer with a consistent and individualised experience.</p>
+            </div>
+            <div class="card is-style-asterisk">
+                <h3>Network Architecture</h3>
+                <p>Comprehensive understanding of the TCP/IP stack and real-world network deployments.</p>
+            </div>
+            <div class="card is-style-asterisk">
+                <h3>Team Leading</h3>
+                <p>Leading our team to better collaboration through efficient communication.</p>
+            </div>
+            <div class="card is-style-asterisk">
+                <h3>Agile Learner</h3>
+                <p>Embracing new challenges, and diving into new skills with enthusiasm and adaptability.</p>
+            </div>
+            <div class="card is-style-asterisk">
+                <h3>Patience & Consistency</h3>
+                <p>You know you need this too.</p>
+            </div>
+        </div>
     </section>
-    <section id="skills">
+    <!-- <section id="skills">
         <div class="header">
             <h2>Skills & Certifications</h2>
             <p>
@@ -242,14 +278,22 @@
                 <div class="box-desc">AWS Architect</div>
             </div>
         </div>
-        <!-- <a tabindex="0" href="#" class="btn">Learn More</a> -->
-    </section>
-    <section id="education" class="purp-gradient-bg">
-        <div class="header">
+    </section> -->
+    <section id="certifications">
+        <!-- <div class="header">
             <h2>Education History</h2>
             <p>
                 As and example of my passion and drive, during my final year of high school I was also
                 studying Cyber Security and Music Industry at South Metropolitan TAFE.
+            </p>
+        </div> -->
+        <div class="header">
+            <h2>Certifications</h2>
+            <p>
+                I've always had a passion to learn and grow
+                my knowledge. In the time I've been working,
+                I've also been studying. Here are some of
+                the certifications and skills I've acquired.
             </p>
         </div>
         <div class="content">
@@ -270,7 +314,7 @@
             </button>
         </div>
     </section>
-    <section id="portfolios">
+    <section id="portfolios" class="purp-gradient-bg">
         <div class="header">
             <h2>Portfolios & Projects</h2>
             <p>
@@ -289,10 +333,10 @@
                 <div class="box-image program"></div>
                 <div class="box-title heading">IT Projects</div>
             </div>
-            <div class="box grayed-out" title="Coming Soon!">
+            <!-- <div class="box grayed-out" title="Coming Soon!">
                 <div class="box-image web"></div>
                 <div class="box-title heading">Websites</div>
-            </div>
+            </div> -->
         </div>
     </section>
     <section id="contact">

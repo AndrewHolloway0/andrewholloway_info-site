@@ -5,22 +5,26 @@ h2, h3 {
 }
 
 #mobilenavigator {
-    width: 100vh;
+    width: 100dvh;
 }
 
 #mobilenavigator #mobilenavbg {
     position: fixed;
     background-color: var(--headers);
-    height: 90px;
+    height: 82px;
     width: 100%;
+    z-index: 4;
     display: none;
+    padding-inline: 1rem;
+    box-sizing: border-box;
+    align-items: center;
 }
 
 #mobilenavigator #mobilenavbg a {
     font-size: 32px;
     text-decoration: none;
     position: absolute;
-    padding: 24px;
+    padding: 2rem;
 }
 
 #mobilenavigator #mobilenavburger {
@@ -28,7 +32,7 @@ h2, h3 {
     background-color: rgba(0, 0, 0, .3);
     right: 15px;
     top: 15px;
-    z-index: 3;
+    z-index: 5;
     display: none;
 }
 
@@ -94,6 +98,22 @@ h2, h3 {
     width: fit-content;
     text-decoration: none;
 }
+.specialbtn {
+    margin: 10px auto;
+    padding: 10px 32px;
+    border: 0;
+    border-radius: 50px;
+    color: var(--offwhite);
+    background-color: #bc64c2;
+    box-shadow: 0px 0px 20px 0px #7ff3eb2c;
+    font-size: 1.3rem;
+    width: fit-content;
+    text-decoration: none;
+    transition: box-shadow 2s;
+}
+.specialbtn:hover {
+    box-shadow: 0px 0px 30px 1px #7ff3eb5b;
+}
 
 #earlyreleases input {
     width: 700px;
@@ -101,6 +121,9 @@ h2, h3 {
 
 #stickynav {
     background-color: var(--headers);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 #stickynav .content {
@@ -171,26 +194,41 @@ h2, h3 {
     margin-top: -25px;
 }
 
+#discography .content {
+    gap: 1.8rem;
+    max-width: 1200px;
+    justify-content: center;
+}
+
 #discography #albumsandsingles {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
     width: 100%;
-    padding-top: 40px;
-    justify-items: center;
+    padding-top: 1.4rem;
+    justify-items: center; */
+    display: flex;
+    gap: 1.4rem;
+    width: 100%;
+    padding-top: 1.4rem;
+    flex-flow: wrap;
+    justify-content: space-evenly;
 }
 
 #discography .discoitem {
     display: grid;
-    grid-template-rows: 180px auto auto;
-    width: 180px;
+    /* grid-template-rows: 170px auto auto; */
+    width: 9.7rem;
     text-align: left;
     text-decoration: none;
+    background-color: hsla(0, 0%, 1%, 0.3);
+    padding: 1rem 0.8rem;
+    border-radius: 0.4rem;
 }
 
 #discography .discoart {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1;
     background-color: var(--offwhite);
     background-size: contain;
     background-repeat: no-repeat;
@@ -199,6 +237,7 @@ h2, h3 {
     text-align: left;
     font-size: 26px;
     font-weight: 700;
+    box-shadow: 0px 0px 20px 0px #000000a9;
 }
 
 #discography .discoart span {
@@ -239,10 +278,11 @@ h2, h3 {
 #about #aboutcontent {
     padding-top: 40px;
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 26% auto;
     text-align: left;
-    font-size: 24px;
-    gap: 26px;
+    font-size: 1.4rem;
+    line-height: 1.36em;
+    gap: 2.4rem;
 }
 
 #about #aboutcontent p:last-child {
@@ -258,6 +298,10 @@ h2, h3 {
     background-position-x: center;
     padding-top: 100%;
     height: 0;
+}
+
+#contact .content {
+    gap: 2rem;
 }
 
 #socialcard {
