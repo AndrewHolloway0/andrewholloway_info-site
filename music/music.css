@@ -45,7 +45,7 @@ h2, h3 {
 }
 
 #frontpage {
-    background-image: url("/media/musicfront.jpg");
+    background-image: url("/media/musicfront.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -56,6 +56,7 @@ h2, h3 {
     margin: 0 auto;
     width: fit-content;
     text-align: center;
+    text-shadow: 0 0 1.8em black;
 }
 
 #cornernav {
@@ -144,8 +145,8 @@ h2, h3 {
 }
 
 #upcoming #upcomingart {
-    /* background-image: url("/media/upcomingart.jpg"); */
-    background-image: url("/media/discography/d-06.jpg");
+    background-image: url("/media/upcomingart.webp");
+    /* background-image: url("/media/discography/d-06.webp"); */
     filter: blur(20px) brightness(0.9);
     -webkit-filter: blur(20px) brightness(0.9);
     -moz-filter: blur(20px) brightness(0.9);
@@ -166,12 +167,13 @@ h2, h3 {
     height: 100vh;
     place-items: center;
     grid-template-rows: 15vh 60vh auto;
+    text-shadow: 0 0 1.2em hsla(0, 0%, 1%, 0.8);
 }
 
 #upcoming #albumartupcoming {
     margin: 0 auto;
-    /* background-image: url("/media/upcomingart.jpg"); */
-    background-image: url("/media/discography/d-06.jpg");
+    background-image: url("/media/upcomingart.webp");
+    /* background-image: url("/media/discography/d-06.webp"); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -181,7 +183,12 @@ h2, h3 {
     transition: all 1s;
     transform: scale(0.92);
     opacity: 0;
+    /* text-shadow: 0 0 1.8em black; */
 }
+
+/* #upcoming #albumartupcoming:hover {
+    background-image: url("/media/upcomingart2.webp");
+} */
 
 #upcoming #albumartupcoming.zoomedin {
     transform: scale(1);
@@ -196,17 +203,13 @@ h2, h3 {
 
 #discography .content {
     gap: 1.8rem;
-    max-width: 1200px;
+    /* max-width: 1200px; */
+    max-width: none;
     justify-content: center;
+    margin-inline: 1rem;
 }
 
 #discography #albumsandsingles {
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2rem;
-    width: 100%;
-    padding-top: 1.4rem;
-    justify-items: center; */
     display: flex;
     gap: 1.4rem;
     width: 100%;
@@ -229,7 +232,7 @@ h2, h3 {
 #discography .discoart {
     width: 100%;
     aspect-ratio: 1;
-    background-color: var(--offwhite);
+    /* background-color: var(--offwhite); */
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: center;
@@ -251,28 +254,32 @@ h2, h3 {
     padding-top: 12px;
 }
 
+#d-07 .discoart {
+    background-image: url("/media/discography/d-07.webp");
+}
+
 #d-06 .discoart {
-    background-image: url("/media/discography/d-06.jpg");
+    background-image: url("/media/discography/d-06.webp");
 }
 
 #d-05 .discoart {
-    background-image: url("/media/discography/d-05.jpg");
+    background-image: url("/media/discography/d-05.webp");
 }
 
 #d-04 .discoart {
-    background-image: url("/media/discography/d-04.jpg");
+    background-image: url("/media/discography/d-04.webp");
 }
 
 #d-03 .discoart {
-    background-image: url("/media/discography/d-03.jpg");
+    background-image: url("/media/discography/d-03.webp");
 }
 
 #d-02 .discoart {
-    background-image: url("/media/discography/d-02.jpg");
+    background-image: url("/media/discography/d-02.webp");
 }
 
 #d-01 .discoart {
-    background-image: url("/media/discography/d-01.jpg");
+    background-image: url("/media/discography/d-01.webp");
 }
 
 #about #aboutcontent {
@@ -290,7 +297,7 @@ h2, h3 {
 }
 
 #about #aboutimg {
-    background-image: url("/media/aboutart.jpg");
+    background-image: url("/media/aboutart.webp");
     background-color: var(--offwhite);
     background-size: contain;
     background-repeat: no-repeat;
