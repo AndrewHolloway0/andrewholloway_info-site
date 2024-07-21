@@ -77,6 +77,20 @@ button.box[onclick]:focus-visible {
   margin-bottom: 0.8rem;
 }
 
+/* a.box[href]::before { */
+.box .box-image::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.2rem;
+  aspect-ratio: 1;
+  background-image: url("/media/icons/share.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 0;
+  transform: translate(0.3rem, -0.3rem);
+}
+
 section:nth-of-type(even) .box {
   background-color: var(--infobox-blue);
 }

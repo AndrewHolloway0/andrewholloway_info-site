@@ -32,7 +32,7 @@ h2, h3 {
     background-color: rgba(0, 0, 0, .3);
     right: 15px;
     top: 15px;
-    z-index: 5;
+    z-index: 999;
     display: none;
 }
 
@@ -220,8 +220,8 @@ h2, h3 {
 
 #discography .discoitem {
     display: grid;
-    /* grid-template-rows: 170px auto auto; */
-    width: 9.7rem;
+    grid-template-rows: 10rem auto auto;
+    grid-template-columns: 10rem;
     text-align: left;
     text-decoration: none;
     background-color: hsla(0, 0%, 1%, 0.3);
@@ -252,6 +252,18 @@ h2, h3 {
 #discography .discotitle {
     font-size: 22px;
     padding-top: 12px;
+}
+
+#d-10 .discoart {
+    background-image: url("/media/discography/d-10.webp");
+}
+
+#d-09 .discoart {
+    background-image: url("/media/discography/d-09.webp");
+}
+
+#d-08 .discoart {
+    background-image: url("/media/discography/d-08.webp");
 }
 
 #d-07 .discoart {
@@ -332,8 +344,8 @@ h2, h3 {
         display: none;
     }
 
-    #mobilenavburger {
-        display: block !important;
+    #mobilenavigator #mobilenavburger {
+        display: block;
     }
 
     #earlyreleases .content form {
@@ -501,11 +513,6 @@ h2, h3 {
 
     #discography .discoart {
         font-size: 18px;
-    }
-
-    #discography .discoitem {
-        grid-template-rows: 120px auto auto;
-        width: 120px;
     }
 
     #discography .discotitle {
