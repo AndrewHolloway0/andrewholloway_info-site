@@ -1,8 +1,8 @@
 <?php
-	$servername = "10.47.101.53";
-	$username = "wordpress";
-	$password = "6VaHr2VU7tk5fCfRJxLQ3y";
-	$dbname = "wordpress";
+	$servername = "10.47.102.182";
+	$username = "site";
+	$password = "K>m<!q4v%CPSfy]P192";
+	$dbname = "wordpress_site";
 
 	// Create connection
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
