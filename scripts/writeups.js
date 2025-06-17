@@ -1,11 +1,24 @@
 const writeups = [{
+    code: "aarnet",
+    title: "AARNet (Australian Academic and Research Network)",
+    role: "Network Operations Centre (NOC) Technician",
+    type: "Workplace",
+    timeframe: {
+        start: "July 2025",
+        end: "Present"
+    },
+    learnt: {
+        details: "My journey at AARNet has just started. Check back later for updates!",
+        items:["Network Monitoring","Incident Response","Customer Support","Network Troubleshooting","Documentation"],
+    },
+},{
     code: "code9",
-    title: "Code 9",
+    title: "Code9 IT Solutions",
     role: "Technical Support Officer ( Level 2 )",
     type: "Workplace",
     timeframe: {
         start: "July 2023",
-        end: "Present"
+        end: "June 2025"
     },
     learnt: {
         details: "My day-to-day activities often include ticketing dispatch, Office 365 admin duties, software troubleshooting, data recovery and new device setup. I've also taken upon managing pojects (site setup's), completing beginning to end of each installation, ensuring reliability and stability.",

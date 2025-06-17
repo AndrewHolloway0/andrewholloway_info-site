@@ -9,8 +9,8 @@
     --clr-accent: #A74BEC;
     --infobox: hsla(283, 6%, 43%, 0.4);
     --infobox-pop: hsla(283, 6%, 5%, 1);
-    --infobox-selected: hsl(56, 100%, 55%, 0.23);
-    --infobox-blue: hsl(236, 91%, 75%, 0.4);
+    --infobox-selected: hsl(283.9, 98%, 39.6%);
+    --infobox-blue: hsla(278, 88%, 10%, 0.4);
     --clr-mainwhite: #ffffff;
     --clr-header-activated: rgb(24 26 39 / 90%);
 
