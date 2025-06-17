@@ -22,7 +22,7 @@ section {
   left: 0;
   max-width: 900px;
   margin-inline: auto;
-  filter: blur(80px);
+  filter: blur(80px) brightness(0.6);
 }
 .bgball {
   position: absolute;

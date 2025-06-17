@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
     <link rel="canonical" href="https://andrewholloway.info/" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css?v=2" />
-    <link rel="stylesheet" type="text/css" href="/css/home.css?v=2" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css?v=3" />
+    <link rel="stylesheet" type="text/css" href="/css/home.css?v=3" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript" src="/scripts/writeups.js"></script>
+    <script type="text/javascript" src="/scripts/writeups.js?v=3"></script>
     <script defer>
         function mobileNavToggle() {
             var mobilenavburger = document.getElementById("head-mobnav").children;
@@ -166,6 +166,7 @@
                 </ul>
             </nav>
         </div>
+        <!-- <a href="/music" class="buttn buttn-2">View Projects</a> -->
     </header>
     <div id="infoBoxPopup" onclick="closeInfoBox()">
         <div id="infoBoxPopupContent">
@@ -180,12 +181,12 @@
         <section>
             <div id="ahollowaytxt">
                 <h1><span class="clr-accent">Andrew</span> Holloway</h1>
-                <p>IT PROFESSIONAL AND ENTHUSIAST</p>
+                <p>IT Specialist - Musician - Lifelong Learner</p>
             </div>
             <div id="summary" class="box">
-                <h2>Executive Summary</h2>
+                <h2>Professional Overview</h2>
                 <p>
-                    Andrew Holloway is an aspiring network engineer who embarked on his journey in 2018. He has a Diploma in IT Advanced Networking and is currently working as a technical support at CODE9 IT, a small business that values customer relationships and ensures individual solutions. He is responsible for providing onsite and remote support, troubleshooting hardware and software issues, installing and configuring network devices, and maintaining documentation and records.
+                    Andrew Holloway is an aspiring <span class="clr-accent">network engineer</span> who embarked on his journey in 2018. He has a strong understanding of Advanced Networking and is currently working as a <span class="clr-accent">network analyst</span>. He provides remote support, troubleshoots hardware and software issues, has installed and configured network devices, and maintains documentation and records.
                 </p>
             </div>
         </section>
@@ -194,12 +195,17 @@
         <div class="header">
             <h2>Experience & Roles</h2>
             <p>
-                My previous roles provided me ensightful experiences in handling pressure,
-                time management, and growing my communication techniques. Here, I show my growth, click for more info.
+                My previous roles provided me with insightful experiences in handling pressure, 
+                managing time effectively, and enhancing my communication skills. Here, I show my growth, click for more info.
             </p>
         </div>
         <div class="content">
-            <button tabindex="0" class="box box-highlighted" onclick="openBoxInfo('code9')">
+            <button tabindex="0" class="box box-highlighted" onclick="openBoxInfo('aarnet')">
+                <div class="box-image code9"></div>
+                <div class="box-title heading">AARNet</div>
+                <div class="box-desc">Network Analyst</div>
+            </button>
+            <button tabindex="0" class="box" onclick="openBoxInfo('code9')">
                 <div class="box-image code9"></div>
                 <div class="box-title heading">Code9 IT</div>
                 <div class="box-desc">IT Support Specialist</div>
@@ -209,16 +215,11 @@
                 <div class="box-title heading">Seton College</div>
                 <div class="box-desc">ICT Officer</div>
             </button>
-            <button tabindex="0" class="box" onclick="openBoxInfo('trs')">
-                <div class="box-image trs"></div>
-                <div class="box-title heading">The Reject Shop</div>
-                <div class="box-desc">Team Leader</div>
-            </button>
         </div>
     </section>
     <section id="keyskills" class="purp-gradient-bg">
         <div class="header">
-            <h2>Key Skills</h2>
+            <h2>Areas of Expertise</h2>
             <p>
                 All of my previous roles provided me helpful experience in handling pressure,
                 time management, and communication. Below, I show my growth.
@@ -230,8 +231,8 @@
                 <p>It takes a keen eye to notice the little things in each job, and to take pride in them.</p>
             </div>
             <div class="card is-style-asterisk">
-                <h3>Impecible Customer Service</h3>
-                <p>Providing each customer with a consistent and individualised experience.</p>
+                <h3>Impeccable Customer Service</h3>
+                <p>Delivering consistent and individualized experiences to each customer.</p>
             </div>
             <div class="card is-style-asterisk">
                 <h3>Network Architecture</h3>
@@ -247,7 +248,7 @@
             </div>
             <div class="card is-style-asterisk">
                 <h3>Patience & Consistency</h3>
-                <p>You know you need this too.</p>
+                <p>An essential quality in any professional environment.</p>
             </div>
         </div>
     </section>
@@ -257,8 +258,8 @@
             <p>
                 I've always had a passion to learn and grow
                 my knowledge. In the time I've been working,
-                I've also been studying. Here are some of
-                the certifications and skills I've acquired.
+                I've also been studying. Here are the 
+                certifications and skills I've acquired.
             </p>
         </div>
         <div class="content">
@@ -281,7 +282,7 @@
     </section>
     <section id="portfolios" class="purp-gradient-bg">
         <div class="header">
-            <h2>Portfolios & Projects</h2>
+            <h2>Creative & Technical Projects</h2>
             <p>
                 I spend my extra time doing things I love, 
                 which includes creating music, programming
@@ -290,6 +291,8 @@
             </p>
         </div>
         <div class="content">
+            <!-- <a href="https://blog.andrewholloway.info/" class="buttn buttn-2">View IT Projects</a>
+            <a href="/music" class="buttn buttn-2">Musical Projects</a> -->
             <a tabindex="0" href="/music/" class="box">
                 <div class="box-image music"></div>
                 <div class="box-title heading">Music</div>
@@ -308,9 +311,9 @@
         <div class="header">
             <h2>Contact</h2>
             <p>
-                If your interested in contacting me, feel free below. I'm always looking for new
-                opportunities, and if you think your team could use someone like me, shoot me a
-                message. Chat soon!
+                If you're interested in contacting me, feel free to do so below. I'm always 
+                open to new opportunities. If you believe your team could benefit from my 
+                skills, please reach out.
             </p>
             <div class="btn-container">
                 <a tabindex="0" href="mailto:andrew@andrewholloway.info" class="btn">Email</a>
