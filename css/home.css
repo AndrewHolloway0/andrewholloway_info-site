@@ -12,9 +12,6 @@ section .wrapper {
   max-width: 140.5rem;
 }
 
-/* section.purp-gradient-bg {
-  background: linear-gradient(rgb(30, 18, 32), rgb(24 15 28 / 40%));
-} */
 
 .content {
   display: grid;
