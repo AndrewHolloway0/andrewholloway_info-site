@@ -232,6 +232,42 @@ p#serviceLength {
   font-weight: 700;
 }
 
+.timelinegroup {
+  padding-left: 1.05rem;
+  padding-block: 0.2rem;
+  position: relative;
+  text-align: left;
+  height: fit-content;
+}
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  border-radius: 1rem;
+}
+.timelineitem {
+  padding-left: 1.4rem;
+  list-style: none;
+  position: relative;
+}
+.timelineitem::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  left: -1.37rem;
+  top: 1.2rem;
+}
+.timelineitem:not(:first-child) {
+  margin-top: 2rem;
+}
+
 /* page changes */
 
 section .content {
@@ -252,6 +288,7 @@ section .header h2 {
 section .header p {
   line-height: calc(var(--font-size) + 1.2rem);
 }
+
 
 section#experience .countup {
   margin-top: 2rem;
@@ -285,39 +322,6 @@ section#experience .content {
 }
 section#experience ul {
   width: 100%;
-}
-section#experience .workrolegroup {
-  padding-left: 1.05rem;
-  padding-block: 0.2rem;
-  position: relative;
-}
-.timeline-line {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0.15rem;
-  height: 100%;
-  background-color: white;
-  border-radius: 1rem;
-}
-section#experience li {
-  padding-left: 1.4rem;
-  list-style: none;
-  position: relative;
-}
-section#experience li::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0.8rem;
-  aspect-ratio: 1;
-  background-color: white;
-  border-radius: 50%;
-  left: -1.37rem;
-  top: 1.2rem;
-}
-section#experience .workrole:not(:first-child) {
-  margin-top: 2rem;
 }
 section#experience .role-timeframe {
   font-size: 1.4rem;
@@ -536,6 +540,10 @@ section#contact .btn-container a {
     width: 8rem;
     height: 8rem;
     font-size: 8rem;
+  }
+  section#technologies .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   section#experience .countup {
     margin-top: 6rem;
