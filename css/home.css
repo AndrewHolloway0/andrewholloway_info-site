@@ -287,9 +287,34 @@ section#experience ul {
   width: 100%;
 }
 section#experience .workrolegroup {
-  border-left: 1px solid white;
   padding-left: 1.05rem;
   padding-block: 0.2rem;
+  position: relative;
+}
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.15rem;
+  height: 100%;
+  background-color: white;
+  border-radius: 1rem;
+}
+section#experience li {
+  padding-left: 1.4rem;
+  list-style: none;
+  position: relative;
+}
+section#experience li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  aspect-ratio: 1;
+  background-color: white;
+  border-radius: 50%;
+  left: -1.37rem;
+  top: 1.2rem;
 }
 section#experience .workrole:not(:first-child) {
   margin-top: 2rem;
@@ -310,9 +335,6 @@ section#experience .role-position {
 }
 section#experience .role-desc {
   margin-top: 1rem;
-}
-section#experience li {
-  padding-left: 1.2rem;
 }
 
 section#portfolios,
