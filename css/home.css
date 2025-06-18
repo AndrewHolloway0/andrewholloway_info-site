@@ -115,46 +115,6 @@ section:nth-of-type(even) .box {
   background-color: var(--infobox-blue);
 }
 
-.box .box-image.aarnet {
-  background-image: url("/media/icons/monitoring.svg");
-}
-
-.box .box-image.code9 {
-  background-image: url("/media/icons/code9.svg");
-}
-
-.box .box-image.scc {
-  background-image: url("/media/icons/school.svg");
-}
-
-.box .box-image.trs {
-  background-image: url("/media/icons/retail.svg");
-}
-
-.box .box-image.networking {
-  background-image: url("/media/icons/networking.svg");
-}
-
-.box .box-image.business {
-  background-image: url("/media/icons/business.svg");
-}
-
-.box .box-image.amazon {
-  background-image: url("/media/icons/amazon.svg");
-}
-
-.box .box-image.music {
-  background-image: url("/media/icons/music_ind.svg");
-}
-
-.box .box-image.program {
-  background-image: url("/media/icons/programming.svg");
-}
-
-.box .box-image.web {
-  background-image: url("/media/icons/websites.svg");
-}
-
 .btn {
   display: inline;
   text-decoration: none;
