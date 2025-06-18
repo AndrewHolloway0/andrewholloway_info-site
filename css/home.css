@@ -253,6 +253,68 @@ section .header p {
   line-height: calc(var(--font-size) + 1.2rem);
 }
 
+section#experience .countup {
+  margin-top: 2rem;
+}
+section#experience .countup h3 {
+  margin-bottom: 1.6rem;
+}
+section#experience .countup .counter>* {
+  background-color: hsla(0, 0%, 0%, 0.45);
+  padding: 0.1rem 0.4rem;
+  margin-bottom: 0.6rem;
+  /* translate: -1rem 0; */
+  border-radius: 0.4rem;
+  display: inline-block;
+}
+section#experience .countup .years,
+section#experience .countup .days,
+section#experience .countup .hours,
+section#experience .countup .minutes,
+section#experience .countup .seconds {
+  color: var(--clr-accent);
+  min-width: 2rem;
+  text-align: center;
+  display: inline-block;
+}
+section#experience .content {
+  margin-top: 0;
+  display: grid;
+  gap: 2.8rem;
+  text-align: left;
+}
+section#experience ul {
+  width: 100%;
+}
+section#experience .workrolegroup {
+  border-left: 1px solid white;
+  padding-left: 1.05rem;
+  padding-block: 0.2rem;
+}
+section#experience .workrole:not(:first-child) {
+  margin-top: 2rem;
+}
+section#experience .role-timeframe {
+  font-size: 1.4rem;
+  line-height: 1.2rem;
+}
+section#experience .role-position {
+  font-size: 1.4rem;
+  color: var(--clr-accent);
+  background-color: hsla(0, 0%, 0%, 0.45);
+  padding: 0.4rem 1rem;
+  translate: -1rem 0;
+  border-radius: 0.4rem;
+  position: relative;
+  width: fit-content;
+}
+section#experience .role-desc {
+  margin-top: 1rem;
+}
+section#experience li {
+  padding-left: 1.2rem;
+}
+
 section#portfolios,
 section#keyskills {
   clip-path: polygon(50% 0, 100% 3%, 100% 97%, 0 100%, 0 3%);
@@ -405,12 +467,15 @@ section#contact .btn-container a {
 
 /* Tablet (M) screen size (660px) */
 @media (min-width: 41.25rem) {
-  section .content {
+  /* section .content {
     grid-template-columns: repeat(3, 1fr) !important;
-  }
+  } */
   section .content {
     gap: 4rem;
     margin-top: 2rem;
+  }
+  section#experience .countup {
+    margin-top: 4rem;
   }
   section#keyskills .content {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -450,6 +515,9 @@ section#contact .btn-container a {
     height: 8rem;
     font-size: 8rem;
   }
+  section#experience .countup {
+    margin-top: 6rem;
+  }
   section#keyskills .card {
     max-width: 20vw;
   }
@@ -464,12 +532,12 @@ section#contact .btn-container a {
     padding-block: 8rem;
     max-width: 135rem;
     margin-inline: auto;
+    text-align: left;
   }
   section#experience .header {
     max-width: 46rem;
-    text-align: left;
   }
-
+  
   /* skills */
   section#skills {
     grid-template-areas: "header webcontent";

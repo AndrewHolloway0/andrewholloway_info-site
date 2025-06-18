@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width,user-scalable=no" />
     <link rel="icon" href="/favicon.png?v=0002" />
     <link rel="canonical" href="https://andrewholloway.info/" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css?v=4" />
-    <link rel="stylesheet" type="text/css" href="/css/home.css?v=4" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css?v=5" />
+    <link rel="stylesheet" type="text/css" href="/css/home.css?v=5" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="/scripts/writeups.js?v=3"></script>
@@ -122,7 +122,36 @@
                 ahSignature.classList.remove('show');
             }
         });
+        window.onload = function() {
+            // Month Day, Year Hour:Minute:Second, id-of-element-container
+            countUpFromTime("Feb 1, 2018 12:00:00", 'countup1'); // ****** Change this line!
+        };
+        function countUpFromTime(countFrom, id) {
+            countFrom = new Date(countFrom).getTime();
+            var now = new Date(),
+                countFrom = new Date(countFrom),
+                timeDifference = (now - countFrom);
+                
+            var secondsInADay = 60 * 60 * 1000 * 24,
+                secondsInAHour = 60 * 60 * 1000;
+                
+            days = Math.floor(timeDifference / (secondsInADay) * 1);
+            years = Math.floor(days / 365);
+            if (years > 1){ days = days - (years * 365) }
+            hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+            mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+            secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
 
+            var idEl = document.getElementById(id);
+            idEl.getElementsByClassName('years')[0].innerHTML = years;
+            idEl.getElementsByClassName('days')[0].innerHTML = days;
+            idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+            idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+            idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+
+            clearTimeout(countUpFromTime.interval);
+            countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
+        }
     </script>
 </head>
 
@@ -187,7 +216,7 @@
             <div id="summary" class="box">
                 <h2>Professional Overview</h2>
                 <p>
-                    Andrew Holloway is an aspiring <span class="clr-accent">network engineer</span> who embarked on his journey in 2018. He has a strong understanding of Advanced Networking and is currently working as a <span class="clr-accent">network analyst</span>. He provides remote support, troubleshoots hardware and software issues, has installed and configured network devices, and maintains documentation and records.
+                    Andrew Holloway is an aspiring <span class="clr-accent">network engineer</span> who embarked on his journey in 2018. He has a strong understanding of advanced networking principals and is currently working as a <span class="clr-accent">network analyst</span>. He provides remote support, troubleshoots hardware and software issues, has installed and configured network devices, and maintains documentation and records.
                 </p>
             </div>
         </section>
@@ -196,34 +225,71 @@
         <div class="header">
             <h2>Experience & Roles</h2>
             <p>
-                My previous roles provided me with insightful experiences in handling pressure, 
-                managing time effectively, and enhancing my communication skills. Here, I show my growth, click for more info.
+                Holloway's previous roles provided him with insightful experiences in handling pressure, 
+                managing time effectively, and enhancing his communication skills.
             </p>
+            <div class="countup" id="countup1">
+                <h3>Time Spent in the IT Industry</h3>
+                <div class="counter">
+                    <div class="counteryears">
+                        <span class="timeel years">00</span>
+                        <span class="timeel timeRefYears">years</span>
+                    </div>
+                    <div class="counterdays">
+                        <span class="timeel days">00</span>
+                        <span class="timeel timeRefDays">days</span>
+                    </div>
+                    <div class="counterhours">
+                        <span class="timeel hours">00</span>
+                        <span class="timeel timeRefHours">hours</span>
+                    </div>
+                    <div class="countermin">
+                        <span class="timeel minutes">00</span>
+                        <span class="timeel timeRefMinutes">minutes</span>
+                    </div>
+                    <div class="countersec">
+                        <span class="timeel seconds">00</span>
+                        <span class="timeel timeRefSeconds">seconds</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="content">
-            <button tabindex="0" class="box box-highlighted" onclick="openBoxInfo('aarnet')">
-                <span class="box-image material-symbols-outlined">monitoring</span>
-                <div class="box-title heading">AARNet</div>
-                <div class="box-desc">Network Analyst</div>
-            </button>
-            <button tabindex="0" class="box" onclick="openBoxInfo('code9')">
-                <span class="box-image material-symbols-outlined">support_agent</span>
-                <div class="box-title heading">Code9 IT</div>
-                <div class="box-desc">IT Support Specialist</div>
-            </button>
-            <button tabindex="0" class="box" onclick="openBoxInfo('scc')">
-                <span class="box-image material-symbols-outlined">school</span>
-                <div class="box-title heading">Seton College</div>
-                <div class="box-desc">ICT Officer</div>
-            </button>
-        </div>
+            <ul class="content">
+                <div class="workrolegroup">
+                    <li class="workrole">
+                        <h3><span class="material-symbols-outlined">monitoring</span> AARNet (Australian Academic and Research Network)</h3>
+                        <p class="role-position">Network Operations Centre (NOC) Analyst</p>
+                        <time class="role-timeframe">July 2025 - Present</time>
+                        <p class="role-desc">His journey at AARNet has just started. Check back later for updates!</p>
+                    </li>
+                </div>
+                <div class="workrolegroup">
+                    <li class="workrole">
+                        <h3><span class="material-symbols-outlined">support_agent</span> Code9 IT</h3>
+                        <p class="role-position">Lead Technical Engineer</p>
+                        <time class="role-timeframe">Feb 2024 - June 2025</time>
+                        <p class="role-desc">Responsibilities included ticket dispatch, Office 365 administration, software troubleshooting, data recovery, and automation. He also managed projects, keeping key stakeholders informed and ensuring a focus on reliability and transparancy.</p>
+                    </li>
+                    <li class="workrole">
+                        <p class="role-position">Technical Support Specialist</p>
+                        <time class="role-timeframe">July 2023 - Feb 2024</time>
+                    </li>
+                </div>
+                <div class="workrolegroup">
+                    <li class="workrole">
+                        <h3><span class="material-symbols-outlined">school</span> Seton College</h3>
+                        <p class="role-position">ICT Support</p>
+                        <time class="role-timeframe text-highlight">May 2022 - July 2023</time>
+                        <p class="role-desc">At Seton, he gained experience in remote device management using Microsoft Endpoint, scripting with PowerShell, and deploying applications to user groups and devices. He also contributed to physical access control processes, developing a broader understanding of security systems management.</p>
+                    </li>
+                </div>
+            </ul>
     </section>
     <section id="keyskills" class="purp-gradient-bg">
         <div class="header">
             <h2>Areas of Expertise</h2>
             <p>
-                All of my previous roles provided me helpful experience in handling pressure,
-                time management, and communication. Below, I show my growth.
+                Holloway has developed a strong foundation in technical support, system administration, and process improvement. His areas of expertise reflect a commitment to continuous learning across diverse IT environments.
             </p>
         </div>
         <div class="content">
@@ -257,10 +323,7 @@
         <div class="header">
             <h2>Certifications</h2>
             <p>
-                I've always had a passion to learn and grow
-                my knowledge. In the time I've been working,
-                I've also been studying. Here are the 
-                certifications and skills I've acquired.
+                Driven by a passion for continuous learning, he has actively pursued professional development alongside his work. The following certifications and skills reflect his commitment to growth in the industry.
             </p>
         </div>
         <div class="content">
@@ -285,10 +348,7 @@
         <div class="header">
             <h2>Creative & Technical Projects</h2>
             <p>
-                I spend my extra time doing things I love, 
-                which includes creating music, programming
-                and much more. Here I've displayed some 
-                of my most interesting and best projects.
+                In his spare time, he enjoys pursuing creative and technical passions such as music production, programming, and more. The projects showcased here highlight some of his most engaging and meaningful work.
             </p>
         </div>
         <div class="content">
@@ -312,9 +372,7 @@
         <div class="header">
             <h2>Contact</h2>
             <p>
-                If you're interested in contacting me, feel free to do so below. I'm always 
-                open to new opportunities. If you believe your team could benefit from my 
-                skills, please reach out.
+                Holloway welcomes inquiries and new opportunities. If you believe his skills could add value to your team, please feel free to get in touch using the details below.
             </p>
             <div class="btn-container">
                 <a tabindex="0" href="mailto:andrew@andrewholloway.info" class="btn">Email</a>

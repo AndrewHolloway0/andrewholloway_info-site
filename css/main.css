@@ -206,6 +206,11 @@ footer #footlinks {
     display: flex;
     justify-content: space-around;
 }
+h3 .material-symbols-outlined {
+    font-size: inherit;
+    vertical-align: -0.2rem;
+    margin-right: 0.4rem;
+}
 
 /* different screen rez */
 
