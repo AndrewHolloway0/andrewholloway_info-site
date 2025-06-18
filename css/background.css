@@ -4,13 +4,6 @@ section {
   z-index: 1;
 }
 
-/* #bodybg {
-    position: absolute;    
-    z-index: 0;
-    overflow: hidden;
-    width: 100vw;
-    padding-bottom: 20px;
-} */
 #bodybg {
   z-index: 0;
   width: 100%;
@@ -21,8 +14,11 @@ section {
   right: 0;
   left: 0;
   max-width: 900px;
+  min-width: 650px;
   margin-inline: auto;
   filter: blur(80px) brightness(0.6);
+  scale: 1.2;
+  animation: backgroundscale 25s ease-in-out alternate infinite;
 }
 .bgball {
   position: absolute;
@@ -157,5 +153,21 @@ section {
   }
   100% {
     transform: translate(3px, -12px) rotate(60deg);
+  }
+}
+@keyframes backgroundscale {
+  0% {
+    transform: scale(1);
+    filter: blur(80px) brightness(0.6);
+  }
+  30% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(0.93);
+    filter: blur(80px) brightness(0.9);
+  }
+  100% {
+    transform: scale(1);
   }
 }
