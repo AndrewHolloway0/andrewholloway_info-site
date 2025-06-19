@@ -1,4 +1,4 @@
-@import url("/vars.css?v=6");
+@import url("/vars.css?v=7");
 
 section {
   padding: 5rem 2rem;
@@ -235,11 +235,10 @@ p#serviceLength {
 .timelinegroup {
   padding-left: 1.05rem;
   padding-block: 0.2rem;
-  position: relative;
   text-align: left;
   height: fit-content;
   --line-width: 2px;
-  --line-distance: 1.4rem;
+  --line-distance: 2.6rem;
   --dot-size: 10px;
   --colour: var(--lightgray);
 }
@@ -257,6 +256,7 @@ p#serviceLength {
   list-style: none;
   display: inline-block;
   width: 100%;
+  position: relative;
 }
 .timelineitem::before {
   content: "";
@@ -266,11 +266,13 @@ p#serviceLength {
   aspect-ratio: 1;
   background-color: var(--colour);
   border-radius: 50%;
-  left: calc((var(--dot-size) / 2) * -1 + 1px);
-  top: 1.1rem;
+  left: calc((var(--dot-size) / -2) + (var(--line-width) / 2));
+  top: 1rem;
 }
-.timelineitem:not(:first-child) {
-  margin-top: 2rem;
+.timelineitem:not(:first-child),
+.timelineitem:not(:first-child)::before {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
 }
 .timelineitemlist {
   display: grid;
