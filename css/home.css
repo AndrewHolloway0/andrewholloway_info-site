@@ -1,4 +1,4 @@
-@import url("/vars.css?v=3");
+@import url("/vars.css?v=6");
 
 section {
   padding: 5rem 2rem;
@@ -232,6 +232,61 @@ p#serviceLength {
   font-weight: 700;
 }
 
+.timelinegroup {
+  padding-left: 1.05rem;
+  padding-block: 0.2rem;
+  position: relative;
+  text-align: left;
+  height: fit-content;
+  --line-width: 2px;
+  --line-distance: 1.4rem;
+  --dot-size: 10px;
+  --colour: var(--lightgray);
+}
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--line-width);
+  height: 100%;
+  background-color: var(--colour);
+  border-radius: 1rem;
+}
+.timelineitem {
+  padding-left: var(--line-distance);
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+}
+.timelineitem::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: var(--dot-size);
+  aspect-ratio: 1;
+  background-color: var(--colour);
+  border-radius: 50%;
+  left: calc((var(--dot-size) / 2) * -1 + 1px);
+  top: 1.1rem;
+}
+.timelineitem:not(:first-child) {
+  margin-top: 2rem;
+}
+.timelineitemlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.6rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+.timelineitemlist li {
+  display: inline-block;
+  color: var(--lightgray);
+}
+.timelineitemlist div svg:hover * {
+  color: var(--clr-accent-light);
+}
+
 /* page changes */
 
 section .content {
@@ -282,46 +337,15 @@ section#experience .content {
   display: grid;
   gap: 2.8rem;
   text-align: left;
+  max-width: 70rem;
 }
 section#experience ul {
   width: 100%;
 }
-section#experience .workrolegroup {
-  padding-left: 1.05rem;
-  padding-block: 0.2rem;
-  position: relative;
-}
-.timeline-line {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0.15rem;
-  height: 100%;
-  background-color: white;
-  border-radius: 1rem;
-}
-section#experience li {
-  padding-left: 1.4rem;
-  list-style: none;
-  position: relative;
-}
-section#experience li::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 0.8rem;
-  aspect-ratio: 1;
-  background-color: white;
-  border-radius: 50%;
-  left: -1.37rem;
-  top: 1.2rem;
-}
-section#experience .workrole:not(:first-child) {
-  margin-top: 2rem;
-}
 section#experience .role-timeframe {
   font-size: 1.4rem;
   line-height: 1.2rem;
+  color: var(--lightgray);
 }
 section#experience .role-position {
   font-size: 1.4rem;
@@ -335,6 +359,7 @@ section#experience .role-position {
 }
 section#experience .role-desc {
   margin-top: 1rem;
+  color: var(--offwhite);
 }
 
 section#portfolios,
@@ -369,6 +394,10 @@ section#keyskills .card {
 section#keyskills .card:hover {
   transform: scale(1.05);
   background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+section#keyskills .card p {
+  color: var(--lightgray);
 }
 
 section#certifications {
@@ -537,6 +566,10 @@ section#contact .btn-container a {
     height: 8rem;
     font-size: 8rem;
   }
+  section#technologies .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   section#experience .countup {
     margin-top: 6rem;
   }
@@ -586,6 +619,14 @@ section#contact .btn-container a {
     grid-column: span 2;
     max-width: -moz-fit-content;
     max-width: fit-content;
+  }
+
+  /* technologies */
+  section#technologies .content{
+    gap: 8rem;
+  }
+  .timelineitemlist {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   /* portfolios */
