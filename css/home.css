@@ -275,7 +275,7 @@ p#serviceLength {
 .timelineitemlist {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 2.6rem;
   margin-top: 2rem;
   font-size: 1.2rem;
 }
@@ -619,6 +619,14 @@ section#contact .btn-container a {
     grid-column: span 2;
     max-width: -moz-fit-content;
     max-width: fit-content;
+  }
+
+  /* technologies */
+  section#technologies .content{
+    gap: 8rem;
+  }
+  .timelineitemlist {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   /* portfolios */
