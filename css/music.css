@@ -241,6 +241,12 @@ section {
 #about p:not(:last-child) {
     margin-bottom: 2rem;
 }
+#about img.social-icon {
+    filter: invert(100%) sepia(2%) saturate(0%) hue-rotate(200deg) brightness(104%) contrast(103%);
+    width: 4rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
 
 
 /* Tablet (M) screen size (660px) */
@@ -274,6 +280,7 @@ section {
     }
     #about {
         gap: 4rem;
+        margin-block: 4rem 2rem;
     }
     #aboutimg {
         width: 25rem;

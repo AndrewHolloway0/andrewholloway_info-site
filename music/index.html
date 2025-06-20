@@ -54,12 +54,12 @@
 			}
 		}
 		function upcomingzoom() {
-			if (document.documentElement.scrollWidth >= 800) {
-				var amount = 650;
-			} else if (document.documentElement.scrollWidth > 570) {
+			if (document.documentElement.scrollWidth >= 1150) {
 				var amount = 400;
+			} else if (document.documentElement.scrollWidth > 570) {
+				var amount = 80;
 			} else {
-				var amount = 130;
+				var amount = 40;
 			}
 
 			// console.log(document.documentElement.scrollTop);
@@ -67,7 +67,7 @@
 			if (document.documentElement.scrollTop >= amount) {
 				document.getElementById("albumartupcoming").className = "zoomedin";
 			} else {
-				// document.getElementById("albumartupcoming").className = "";
+				document.getElementById("albumartupcoming").className = "";
 			}
 		}
 
@@ -118,7 +118,7 @@
 		<div id="upcomingart"></div>
 		<div id="upcomingtxt">
 			<h2>Latest Release</h2>
-			<a class="zoomedin" href="https://distrokid.com/hyperfollow/andrewholloway/fly-high-feat-foofyfox" target="_blank" id="albumartupcoming"></a>
+			<a href="https://distrokid.com/hyperfollow/andrewholloway/fly-high-feat-foofyfox" target="_blank" id="albumartupcoming"></a>
 			<div id="albumtxt">
 				<div id="albumtitle">"Fly High"</div>
 				<span class="h1subtext subtext">Released August 9th</span>
@@ -192,19 +192,19 @@
 			<p>Whether it's an ambient instrumental or a vibrant synth track, Andrew aims to craft music that feels cinematic, honest, and just a little unpredictable.</p>
 			<h3>Socials</h3>
 			<a href="https://open.spotify.com/artist/2sbHQ4QlPdaefcIUNctmYl" target="_blank">
-				<img src="/media/icons/spotify.svg" alt="spotify" />
+				<img class="social-icon" src="/media/icons/spotify.svg" alt="spotify" />
 			</a>
 			<a href="https://www.instagram.com/andrewhollowaym/" target="_blank">
-				<img src="/media/icons/insta.svg" alt="instagram" />
+				<img class="social-icon" src="/media/icons/insta.svg" alt="instagram" />
 			</a>
 			<a href="https://www.linkedin.com/in/andrew-holloway/" target="_blank">
-				<img src="/media/icons/linkedin.svg" alt="linkedin" />
+				<img class="social-icon" src="/media/icons/linkedin.svg" alt="linkedin" />
 			</a>
 			<a href="https://twitter.com/andrewhollowaym" target="_blank">
-				<img src="/media/icons/twitter.svg" alt="twitter" />
+				<img class="social-icon" src="/media/icons/twitter.svg" alt="twitter" />
 			</a>
 			<a href="https://www.youtube.com/@andrewhollowaym" target="_blank">
-				<img src="/media/icons/youtube.svg" alt="youtube" />
+				<img class="social-icon" src="/media/icons/youtube.svg" alt="youtube" />
 			</a>
 		</div>
 	</section>
