@@ -11,8 +11,8 @@
 	<meta name="viewport" content="width=device-width,user-scalable=no" />
 	<link rel="icon" href="/favicon.png?v=0002" />
 	<link rel="canonical" href="https://andrewholloway.info/music/" />
-	<link rel="stylesheet" href="/main.css">
-	<link rel="stylesheet" href="music.css">
+	<link rel="stylesheet" href="/css/main.css?v=8">
+	<link rel="stylesheet" href="/css/music.css?v=8">
 	<script>
 		function socialCardToggle() {
 			var socialCard = document.getElementById("socialcard");
@@ -54,12 +54,12 @@
 			}
 		}
 		function upcomingzoom() {
-			if (document.documentElement.scrollWidth >= 800) {
-				var amount = 650;
-			} else if (document.documentElement.scrollWidth > 570) {
+			if (document.documentElement.scrollWidth >= 1150) {
 				var amount = 400;
+			} else if (document.documentElement.scrollWidth > 570) {
+				var amount = 80;
 			} else {
-				var amount = 130;
+				var amount = 40;
 			}
 
 			// console.log(document.documentElement.scrollTop);
@@ -83,51 +83,49 @@
 				</span>
 			</button>
 		</div>
-		<div id="mobilenavbg">
+		<div id="mobilenavbg" style="display: none;">
 			<a href="/">&#8249; Home</a>
 		</div>
 	</div>
-	<div id="frontpage" class="fullpage">
-		<div id="maintext">
-			<div class="h0">ANDREW HOLLOWAY</div>
-			<h1 class="subtext">music producer | artist | musician</h1>
-		</div>
+	<section id="frontpage" class="fullpage">
+		<h1 id="maintext">
+			<div>ANDREW HOLLOWAY</div>
+			<div class="subtext">music producer | artist | musician</div>
+		</h1>
 		<div id="cornernav">
 			<h4>OTHER PAGES</h4>
-			<span class="h4subtext subtext">
-				<a href="/">Home</a>
-			</span>
+			<a href="/">Home</a>
 		</div>
-	</div>
-	<div id="earlyreleases" class="section">
+	</section>
+	<section id="earlyreleases">
 		<div class="content">
 			<h2>Get Releases Early</h2>
 			<form>
-				<a class="specialbtn" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
+				<a class="btn" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Access Now!</a>
 			</form>
 		</div>
-	</div>
+	</section>
 	<nav id="stickynav">
 		<div class="content">
 			<a href="#earlyreleases">early releases</a>
-			<a href="#upcoming">upcoming</a>
+			<a href="#upcoming">latest</a>
 			<a href="#discography">discography</a>
 			<a href="#about">about</a>
 			<a href="#contact">contact</a>
 		</div>
 	</nav>
-	<div id="upcoming" class="fullpage">
+	<section id="upcoming">
 		<div id="upcomingart"></div>
 		<div id="upcomingtxt">
-			<h1>Latest Release</h1>
+			<h2>Latest Release</h2>
 			<a href="https://distrokid.com/hyperfollow/andrewholloway/fly-high-feat-foofyfox" target="_blank" id="albumartupcoming"></a>
 			<div id="albumtxt">
-				<h1 id="albumtitle">"Fly High"</h1>
+				<div id="albumtitle">"Fly High"</div>
 				<span class="h1subtext subtext">Released August 9th</span>
 			</div>
 		</div>
-	</div>
-	<div id="discography" class="section">
+	</section>
+	<section id="discography">
 		<div class="content">
 			<h2>Discography</h2>
 			<div id="albumsandsingles">
@@ -182,63 +180,34 @@
 					<span class="discotype">Single</span>
 				</a>
 			</div>
-			<a class="specialbtn" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Early Access
-				Now!</a>
+			<a class="btn" href="https://www.patreon.com/andrewhollowaymusic" target="_blank">Get Early Access Now!</a>
 		</div>
-	</div>
-	<div id="about" class="section">
+	</section>
+	<section id="about">
+		<div id="aboutimg"></div>
 		<div class="content">
 			<h2>About</h2>
-			<div id="aboutcontent">
-				<div id="aboutimg"></div>
-				<div id="abouttxt">
-					<p>Hi! Thanks a lot for checking me out! I'm a solo artist from Perth,
-						Australia. I have over a decade of piano playing experience,
-						including performing and rehearsing. I started pursuing a music
-						career in high school with a few friends. We released a few songs
-						under the name 'The Supertonics' with the help of a great musical
-						mentor and teacher, now&nbsp;friend.
-					</p>
-					<p>Some of core musical inspirations include Jacob Collier, Coldplay
-						(the early 2000s), blink-182, and as of lately, Cory Wong, Hans
-						Zimmer, and John Powell. I do prefer to listen to rock music,
-						however jazz is where I would like to be as a musician one day. I
-						love and am always open to collaboration with other artists, as
-						working with people that share the same passion for music as I
-						do creates a great environment for writing the best&nbsp;music!
-					</p>
-				</div>
-			</div>
+			<p>Andrew Holloway is a genre-fluid composer, producer, and multi-instrumentalist based in Perth, Australia. Starting on piano at the age of 3 and beginning formal lessons at 8, Andrew's music journey has spanned orchestral compositions, rock, pop, and more recently, electronic-infused styles. His sound resists neat categorisation—anchored by melody, shaped by emotion, and driven by an exploratory spirit.</p>
+			<p>Influenced more by moods than by specific artists, Andrew draws inspiration from everything from Jacob Collier's harmonic complexity to the soaring synths of FM-84 and Porter Robinson. His recent works include collaborations such as his 2025 single with FoofyFox, and past performances like his appearance at his hometown's local MADD concert.</p>
+			<p>Whether it's an ambient instrumental or a vibrant synth track, Andrew aims to craft music that feels cinematic, honest, and just a little unpredictable.</p>
+			<h3>Socials</h3>
+			<a href="https://open.spotify.com/artist/2sbHQ4QlPdaefcIUNctmYl" target="_blank">
+				<img class="social-icon" src="/media/icons/spotify.svg" alt="spotify" />
+			</a>
+			<a href="https://www.instagram.com/andrewhollowaym/" target="_blank">
+				<img class="social-icon" src="/media/icons/insta.svg" alt="instagram" />
+			</a>
+			<a href="https://www.linkedin.com/in/andrew-holloway/" target="_blank">
+				<img class="social-icon" src="/media/icons/linkedin.svg" alt="linkedin" />
+			</a>
+			<a href="https://twitter.com/andrewhollowaym" target="_blank">
+				<img class="social-icon" src="/media/icons/twitter.svg" alt="twitter" />
+			</a>
+			<a href="https://www.youtube.com/@andrewhollowaym" target="_blank">
+				<img class="social-icon" src="/media/icons/youtube.svg" alt="youtube" />
+			</a>
 		</div>
-	</div>
-	<div id="contact" class="section">
-		<div class="content">
-			<h2>Contact</h2>
-			<div>
-				<a href="mailto:music@andrewholloway.info" class="intbuttons">Business Inquiry</a>
-				<a href="https://www.paypal.com/donate/?business=NVEPYM738GEHJ&no_recurring=0&currency_code=AUD"
-					class="intbuttons" target="_blank">Donate</a>
-				<button class="intbuttons" id="socialbutton" onclick="socialCardToggle();">Socials</button>
-				<div id="socialcard">
-					<a href="https://www.instagram.com/andrewhollowaym/" target="_blank">
-						<img src="/media/icons/insta.svg" alt="instagram" />
-					</a>
-					<a href="https://www.linkedin.com/in/andrew-holloway/" target="_blank">
-						<img src="/media/icons/linkedin.svg" alt="linkedin" />
-					</a>
-					<a href="https://open.spotify.com/artist/2sbHQ4QlPdaefcIUNctmYl" target="_blank">
-						<img src="/media/icons/spotify.svg" alt="spotify" />
-					</a>
-					<a href="https://twitter.com/andrewhollowaym" target="_blank">
-						<img src="/media/icons/twitter.svg" alt="twitter" />
-					</a>
-					<a href="https://www.youtube.com/@andrewhollowaym" target="_blank">
-						<img src="/media/icons/youtube.svg" alt="youtube" />
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+	</section>
 	<footer>
 		<div class="wrapper">
 			<h4>Andrew Holloway &copy; 2025</h4>

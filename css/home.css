@@ -115,50 +115,6 @@ section:nth-of-type(even) .box {
   background-color: var(--infobox-blue);
 }
 
-.btn {
-  display: inline;
-  text-decoration: none;
-  /* border: var(--clr-accent) solid 0.5rem; */
-  /* border-radius: 0.5rem; */
-  /* padding: 1rem 3rem; */
-  padding: 0.6rem 0.4rem;
-  font-size: var(--font-size);
-  display: block;
-  /* max-width: -moz-fit-content;
-    max-width: fit-content; */
-  margin-inline: auto;
-  transition: background-color 70ms ease-in;
-  position: relative;
-}
-
-.btn::before {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: var(--clr-accent);
-  bottom: 0;
-  left: 0;
-  transition: width 130ms ease-in;
-  z-index: 1;
-}
-
-.btn:hover::before,
-.btn:focus-within::before {
-  width: 100%;
-  /* background-color: var(--clr-accent); */
-}
-
-.btn::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: white;
-  bottom: 0;
-  left: 0;
-}
-
 .btn-container .btn:not(:first-child) {
   margin-top: 1.5rem;
 }
@@ -222,71 +178,10 @@ p#serviceLength {
   content: "Industry: ";
   font-weight: 700;
 }
-/* #roleDesc::before {
-    content: 'Role Details: ';
-    font-weight: 700;
-} */
 #infoContent::before {
   content: "What I've Learnt: ";
   display: block;
   font-weight: 700;
-}
-
-.timelinegroup {
-  padding-left: 1.05rem;
-  padding-block: 0.2rem;
-  text-align: left;
-  height: fit-content;
-  --line-width: 2px;
-  --line-distance: 2.6rem;
-  --dot-size: 10px;
-  --colour: var(--lightgray);
-}
-.timeline-line {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: var(--line-width);
-  height: 100%;
-  background-color: var(--colour);
-  border-radius: 1rem;
-}
-.timelineitem {
-  padding-left: var(--line-distance);
-  list-style: none;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-}
-.timelineitem::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: var(--dot-size);
-  aspect-ratio: 1;
-  background-color: var(--colour);
-  border-radius: 50%;
-  left: calc((var(--dot-size) / -2) + (var(--line-width) / 2));
-  top: 1rem;
-}
-.timelineitem:not(:first-child),
-.timelineitem:not(:first-child)::before {
-  margin-top: 0.7rem;
-  padding-top: 0.7rem;
-}
-.timelineitemlist {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.6rem;
-  margin-top: 2rem;
-  font-size: 1.2rem;
-}
-.timelineitemlist li {
-  display: inline-block;
-  color: var(--lightgray);
-}
-.timelineitemlist div svg:hover * {
-  color: var(--clr-accent-light);
 }
 
 /* page changes */
@@ -329,7 +224,7 @@ section#experience .countup .days,
 section#experience .countup .hours,
 section#experience .countup .minutes,
 section#experience .countup .seconds {
-  color: var(--clr-accent);
+  color: var(--clr-accent-light);
   min-width: 2rem;
   text-align: center;
   display: inline-block;
@@ -351,7 +246,7 @@ section#experience .role-timeframe {
 }
 section#experience .role-position {
   font-size: 1.4rem;
-  color: var(--clr-accent);
+  color: var(--clr-accent-light);
   background-color: hsla(0, 0%, 0%, 0.45);
   padding: 0.4rem 1rem;
   translate: -1rem 0;
