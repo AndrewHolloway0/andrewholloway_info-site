@@ -63,6 +63,14 @@ section {
     display: none;
 }
 
+/* Releases */
+#earlyreleases .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-block: 0.4rem;
+}
+
 /* Mid-Navigation */
 #stickynav {
     background-color: var(--main-bg-color);
@@ -70,12 +78,13 @@ section {
     top: 0;
     z-index: 5;
     display: none;
+    
 }
 #stickynav .content {
     display: flex;
     padding-block: 1rem;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.4rem;
 }
 
 /* Upcoming */
@@ -153,12 +162,12 @@ section {
 }
 #discography .discoitem {
     display: grid;
-    grid-template-rows: 12rem auto auto;
+    grid-template-rows: 12rem auto 1fr;
     grid-template-columns: 12rem;
     text-align: left;
     text-decoration: none;
     background-color: hsla(0, 0%, 1%, 0.3);
-    padding: 1rem 0.8rem;
+    padding: 1rem 0.4rem;
     border-radius: 0.4rem;
 }
 #discography .discoart {
